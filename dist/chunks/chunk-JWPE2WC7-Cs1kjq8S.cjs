@@ -1,0 +1,1 @@
+const e=require("./chunk-Y2CYZVJY-CnmLqFtv.cjs");function t(e,t){e.accDescr&&t.setAccDescription?.(e.accDescr),e.accTitle&&t.setAccTitle?.(e.accTitle),e.title&&t.setDiagramTitle?.(e.title)}e.n(t,`populateCommonDb`),Object.defineProperty(exports,"t",{enumerable:!0,get:function(){return t}});

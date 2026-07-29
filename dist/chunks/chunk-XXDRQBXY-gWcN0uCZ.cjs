@@ -1,0 +1,1 @@
+const e=require("./chunk-Y2CYZVJY-CnmLqFtv.cjs"),t=require("./src-CR--T_NF.cjs");var n=e.n((e,n)=>{let r;return n===`sandbox`&&(r=t.p(`#i`+e)),(n===`sandbox`?t.p(r.nodes()[0].contentDocument.body):t.p(`body`)).select(`[id="${e}"]`)},`getDiagramElement`);Object.defineProperty(exports,"t",{enumerable:!0,get:function(){return n}});

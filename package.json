@@ -1,0 +1,44 @@
+{
+  "name": "bible-note",
+  "version": "0.1.1-dev",
+  "description": "A Bible study tool for taking notes and organizing your thoughts.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/bible-note.cjs",
+  "module": "./dist/bible-note.mjs",
+  "types": "./types/lib.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/lib.d.ts",
+      "import": "./dist/bible-note.mjs",
+      "require": "./dist/bible-note.cjs"
+    },
+    "./styles.css": "./dist/bible-note.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "use-sync-external-store": "^1.6.0"
+  },
+  "peerDependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "keywords": [
+    "bible",
+    "lexical",
+    "editor",
+    "react",
+    "notes"
+  ]
+}

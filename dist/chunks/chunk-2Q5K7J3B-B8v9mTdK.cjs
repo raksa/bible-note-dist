@@ -1,0 +1,1 @@
+const e=require("./chunk-Y2CYZVJY-CnmLqFtv.cjs");var t=class{constructor(e){this.init=e,this.records=this.init()}static{e.n(this,`ImperativeState`)}reset(){this.records=this.init()}};Object.defineProperty(exports,"t",{enumerable:!0,get:function(){return t}});
