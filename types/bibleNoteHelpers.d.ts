@@ -3,11 +3,11 @@ import type { LibraryItems } from './excalidrawTypes';
 import type { Root } from 'react-dom/client';
 import type { BibleNoteEditorControllerOwner, BibleNoteSettingsControllerOwner } from './AppComp';
 import type { BibleNoteFooterActionButtonControllerOwner } from './footerActionButtons';
-import type { LookupDataType } from './lookupData';
 import type { BibleNoteColorScheme } from './params/colorScheme';
 import type { BibleNoteStorageManager } from './storageManager';
 import type { FilePathResolver, FileRevealer } from './utils/filePathResolver';
 import type { ExtraFontFamilyOption } from './utils/fontFamilyOptions';
+import type { LocationsLookupManager, NamesLookupManager } from './LookupManager';
 export type BibleNoteSettingsController = {
     setColorScheme: (mode: BibleNoteColorScheme) => void;
 };
@@ -17,9 +17,9 @@ type MentionedBibleDataType = {
     fullText: string;
     style?: CSSProperties;
 };
-export type { LookupDataType };
 export type BibleNoteProps = {
-    lookupData: LookupDataType;
+    namesLookupManager: NamesLookupManager;
+    locationsLookupManager: LocationsLookupManager;
     getLangCode: (text: string) => string;
     editorExtraFontFamilies: ReadonlyArray<ExtraFontFamilyOption>;
     excalidrawLibraryItems?: LibraryItems;
@@ -52,3 +52,4 @@ export declare function renderEditor({ props, containerElement, editorController
     settingsControllerOwner: BibleNoteSettingsControllerOwner;
     storageManager: BibleNoteStorageManager;
 }, { settings, settingsContainerElement }?: BibleNoteRenderOptions): Root;
+export {};
