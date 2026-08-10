@@ -46655,9 +46655,559 @@ function sF({ props: e, containerElement: t, editorControllerOwner: n, footerAct
 	}) })), c;
 }
 //#endregion
+//#region src/utils/bibleShortVerses.ts
+var cF = [
+	{
+		aliases: ["Gen", "Gn"],
+		key: "GEN",
+		name: "Genesis"
+	},
+	{
+		aliases: [
+			"Exod",
+			"Exo",
+			"Exd"
+		],
+		key: "EXO",
+		name: "Exodus"
+	},
+	{
+		aliases: ["Lev", "Lv"],
+		key: "LEV",
+		name: "Leviticus"
+	},
+	{
+		aliases: ["Num", "Nmb"],
+		key: "NUM",
+		name: "Numbers"
+	},
+	{
+		aliases: [
+			"Deut",
+			"Deu",
+			"Dtn"
+		],
+		key: "DEU",
+		name: "Deuteronomy"
+	},
+	{
+		aliases: ["Josh", "Jsh"],
+		key: "JOS",
+		name: "Joshua"
+	},
+	{
+		aliases: ["Judg", "Jdgs"],
+		key: "JDG",
+		name: "Judges"
+	},
+	{
+		aliases: ["Rut", "Rth"],
+		key: "RUT",
+		name: "Ruth"
+	},
+	{
+		aliases: ["1 Sam", "1 Sa"],
+		key: "1SA",
+		name: "1 Samuel"
+	},
+	{
+		aliases: ["2 Sam", "2 Sa"],
+		key: "2SA",
+		name: "2 Samuel"
+	},
+	{
+		aliases: [
+			"1 Kgs",
+			"1 Kin",
+			"1 Ki"
+		],
+		key: "1KI",
+		name: "1 Kings"
+	},
+	{
+		aliases: [
+			"2 Kgs",
+			"2 Kin",
+			"2 Ki"
+		],
+		key: "2KI",
+		name: "2 Kings"
+	},
+	{
+		aliases: [
+			"1 Chron",
+			"1 Chr",
+			"1 Ch"
+		],
+		key: "1CH",
+		name: "1 Chronicles"
+	},
+	{
+		aliases: [
+			"2 Chron",
+			"2 Chr",
+			"2 Ch"
+		],
+		key: "2CH",
+		name: "2 Chronicles"
+	},
+	{
+		aliases: ["Ezr"],
+		key: "EZR",
+		name: "Ezra"
+	},
+	{
+		aliases: ["Neh"],
+		key: "NEH",
+		name: "Nehemiah"
+	},
+	{
+		aliases: ["Esth", "Est"],
+		key: "EST",
+		name: "Esther"
+	},
+	{
+		key: "JOB",
+		name: "Job"
+	},
+	{
+		aliases: [
+			"Psalm",
+			"Pss",
+			"Psa",
+			"Psm",
+			"Ps"
+		],
+		key: "PSA",
+		name: "Psalms"
+	},
+	{
+		aliases: [
+			"Prov",
+			"Pro",
+			"Prv"
+		],
+		key: "PRO",
+		name: "Proverbs"
+	},
+	{
+		aliases: [
+			"Eccles",
+			"Eccl",
+			"Ecc",
+			"Qoh"
+		],
+		key: "ECC",
+		name: "Ecclesiastes"
+	},
+	{
+		aliases: [
+			"Song of Songs",
+			"Canticles",
+			"Song",
+			"Cant",
+			"Sng"
+		],
+		key: "SNG",
+		name: "Song of Solomon"
+	},
+	{
+		aliases: ["Isa", "Isai"],
+		key: "ISA",
+		name: "Isaiah"
+	},
+	{
+		aliases: ["Jer"],
+		key: "JER",
+		name: "Jeremiah"
+	},
+	{
+		aliases: ["Lam"],
+		key: "LAM",
+		name: "Lamentations"
+	},
+	{
+		aliases: [
+			"Ezek",
+			"Eze",
+			"Ezk"
+		],
+		key: "EZK",
+		name: "Ezekiel"
+	},
+	{
+		aliases: ["Dan"],
+		key: "DAN",
+		name: "Daniel"
+	},
+	{
+		aliases: ["Hos"],
+		key: "HOS",
+		name: "Hosea"
+	},
+	{
+		aliases: ["Jol"],
+		key: "JOL",
+		name: "Joel"
+	},
+	{
+		aliases: ["Amo"],
+		key: "AMO",
+		name: "Amos"
+	},
+	{
+		aliases: ["Obad", "Oba"],
+		key: "OBA",
+		name: "Obadiah"
+	},
+	{
+		aliases: ["Jon", "Jnh"],
+		key: "JON",
+		name: "Jonah"
+	},
+	{
+		aliases: ["Mic"],
+		key: "MIC",
+		name: "Micah"
+	},
+	{
+		aliases: ["Nah", "Nam"],
+		key: "NAM",
+		name: "Nahum"
+	},
+	{
+		aliases: ["Hab"],
+		key: "HAB",
+		name: "Habakkuk"
+	},
+	{
+		aliases: ["Zeph", "Zep"],
+		key: "ZEP",
+		name: "Zephaniah"
+	},
+	{
+		aliases: ["Hag"],
+		key: "HAG",
+		name: "Haggai"
+	},
+	{
+		aliases: ["Zech", "Zec"],
+		key: "ZEC",
+		name: "Zechariah"
+	},
+	{
+		aliases: ["Mal"],
+		key: "MAL",
+		name: "Malachi"
+	},
+	{
+		aliases: ["Matt", "Mat"],
+		key: "MAT",
+		name: "Matthew"
+	},
+	{
+		aliases: ["Mrk", "Mk"],
+		key: "MRK",
+		name: "Mark"
+	},
+	{
+		aliases: ["Luk", "Lk"],
+		key: "LUK",
+		name: "Luke"
+	},
+	{
+		aliases: ["Jhn", "Jn"],
+		key: "JHN",
+		name: "John"
+	},
+	{
+		aliases: ["Act"],
+		key: "ACT",
+		name: "Acts"
+	},
+	{
+		aliases: ["Rom"],
+		key: "ROM",
+		name: "Romans"
+	},
+	{
+		aliases: ["1 Cor", "1 Co"],
+		key: "1CO",
+		name: "1 Corinthians"
+	},
+	{
+		aliases: ["2 Cor", "2 Co"],
+		key: "2CO",
+		name: "2 Corinthians"
+	},
+	{
+		aliases: ["Gal"],
+		key: "GAL",
+		name: "Galatians"
+	},
+	{
+		aliases: ["Eph"],
+		key: "EPH",
+		name: "Ephesians"
+	},
+	{
+		aliases: [
+			"Philip",
+			"Phil",
+			"Php"
+		],
+		key: "PHP",
+		name: "Philippians"
+	},
+	{
+		aliases: ["Col"],
+		key: "COL",
+		name: "Colossians"
+	},
+	{
+		aliases: [
+			"1 Thess",
+			"1 Thes",
+			"1 Th"
+		],
+		key: "1TH",
+		name: "1 Thessalonians"
+	},
+	{
+		aliases: [
+			"2 Thess",
+			"2 Thes",
+			"2 Th"
+		],
+		key: "2TH",
+		name: "2 Thessalonians"
+	},
+	{
+		aliases: ["1 Tim", "1 Ti"],
+		key: "1TI",
+		name: "1 Timothy"
+	},
+	{
+		aliases: ["2 Tim", "2 Ti"],
+		key: "2TI",
+		name: "2 Timothy"
+	},
+	{
+		aliases: ["Tit"],
+		key: "TIT",
+		name: "Titus"
+	},
+	{
+		aliases: [
+			"Philem",
+			"Phlm",
+			"Phm"
+		],
+		key: "PHM",
+		name: "Philemon"
+	},
+	{
+		aliases: ["Heb"],
+		key: "HEB",
+		name: "Hebrews"
+	},
+	{
+		aliases: ["Jas"],
+		key: "JAS",
+		name: "James"
+	},
+	{
+		aliases: ["1 Pet", "1 Pe"],
+		key: "1PE",
+		name: "1 Peter"
+	},
+	{
+		aliases: ["2 Pet", "2 Pe"],
+		key: "2PE",
+		name: "2 Peter"
+	},
+	{
+		aliases: ["1 Jn", "1 Jhn"],
+		key: "1JN",
+		name: "1 John"
+	},
+	{
+		aliases: ["2 Jn", "2 Jhn"],
+		key: "2JN",
+		name: "2 John"
+	},
+	{
+		aliases: ["3 Jn", "3 Jhn"],
+		key: "3JN",
+		name: "3 John"
+	},
+	{
+		aliases: ["Jud"],
+		key: "JUD",
+		name: "Jude"
+	},
+	{
+		aliases: ["Revelations", "Rev"],
+		key: "REV",
+		name: "Revelation"
+	}
+], lF = {
+	1: [
+		"I",
+		"1st",
+		"First"
+	],
+	2: [
+		"II",
+		"2nd",
+		"Second"
+	],
+	3: [
+		"III",
+		"3rd",
+		"Third"
+	]
+}, uF = 150, dF = 176, fF = /* @__PURE__ */ new Set([
+	"autolink",
+	"link",
+	"mark"
+]), pF = /^\p{Nd}$/u, mF = "[^\\S\\r\\n]", hF = RegExp(`${mF}*(\\p{Nd}+)(?:${mF}*:${mF}*(\\p{Nd}+))?`, "uy"), gF = RegExp(`${mF}*[-\\u2010-\\u2015]${mF}*`, "uy"), _F = RegExp(`${mF}*[,;]${mF}*`, "uy");
+function vF(e) {
+	return e.trim().replace(/\s+/gu, " ").toLowerCase();
+}
+function yF(e) {
+	let t = [
+		e.name,
+		...e.aliases ?? [],
+		e.key
+	], n = [];
+	for (let e of t) {
+		let t = /^([123])\s+(.+)$/u.exec(e), r = t === null ? void 0 : lF[t[1]];
+		if (!(t === null || r === void 0)) for (let e of r) n.push(`${e} ${t[2]}`);
+	}
+	return [...t, ...n];
+}
+function bF() {
+	let e = /* @__PURE__ */ new Map();
+	for (let t of cF) for (let n of yF(t)) {
+		let r = vF(n);
+		e.has(r) || e.set(r, t.key);
+	}
+	return e;
+}
+var xF = bF();
+function SF() {
+	let e = Array.from(xF.keys()).sort((e, t) => t.length - e.length || e.localeCompare(t)).map((e) => e.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&")).map((e) => e.replace(/ /gu, `${mF}+`)).join("|");
+	return RegExp(`\\b(${e})\\.?(?=${mF}*\\p{Nd})`, "giu");
+}
+var CF = SF();
+function wF(e) {
+	let t = e.codePointAt(0);
+	if (t === void 0 || !pF.test(e)) return null;
+	for (let e = 0; e <= 9; e += 1) if (!pF.test(String.fromCodePoint(t - e - 1))) return e;
+	return null;
+}
+function TF(e) {
+	let t = 0;
+	for (let n of e) {
+		let e = wF(n);
+		if (e === null) return null;
+		t = t * 10 + e;
+	}
+	return e.length === 0 ? null : t;
+}
+function EF(e, t, n) {
+	return e.lastIndex = n, e.exec(t);
+}
+function DF(e, t) {
+	let n = EF(hF, e, t);
+	if (n === null) return null;
+	let r = n[2] !== void 0, i = TF(n[1]), a = r ? i : null, o = r ? TF(n[2]) : i;
+	return o === null || o < 1 || o > dF || r && (a === null || a < 1 || a > uF) ? null : {
+		chapter: a,
+		endIndex: hF.lastIndex,
+		verse: o
+	};
+}
+function OF(e, t, n) {
+	return `${e} ${t}:${n}`;
+}
+function kF(e, t, n, r, i) {
+	let a = OF(e, t, n);
+	if (r !== t) return [a, OF(e, r, i)];
+	if (i <= n) return [a];
+	let o = [];
+	for (let r = n; r <= i; r += 1) o.push(OF(e, t, r));
+	return o;
+}
+function AF(e, t, n, r) {
+	let i = t, a = t, o = null;
+	for (;;) {
+		let t = DF(e, a);
+		if (t === null) break;
+		let s = t.chapter ?? o;
+		if (s === null) break;
+		a = t.endIndex, o = s;
+		let c = s, l = t.verse;
+		if (EF(gF, e, a) !== null) {
+			let t = DF(e, gF.lastIndex);
+			t !== null && (a = t.endIndex, c = t.chapter ?? s, l = t.verse, o = c);
+		}
+		for (let e of kF(n, s, t.verse, c, l)) r(e);
+		if (i = a, EF(_F, e, a) === null) break;
+		a = _F.lastIndex;
+	}
+	return i;
+}
+function jF(e) {
+	let t = [], n = /* @__PURE__ */ new Set(), r = (e) => {
+		n.has(e) || (n.add(e), t.push(e));
+	};
+	CF.lastIndex = 0;
+	let i;
+	for (; (i = CF.exec(e)) !== null;) {
+		let t = xF.get(vF(i[1]));
+		if (t === void 0) continue;
+		let n = AF(e, CF.lastIndex, t, r);
+		CF.lastIndex = Math.max(n, CF.lastIndex);
+	}
+	return t;
+}
+function MF(e, t) {
+	if (Array.isArray(e)) {
+		for (let n of e) MF(n, t);
+		return;
+	}
+	if (typeof e != "object" || !e) return;
+	let n = e, r = typeof n.type == "string" ? n.type : "";
+	if (r === "linebreak") {
+		t.push("\n");
+		return;
+	}
+	typeof n.text == "string" && t.push(n.text), n.mentionKind === "bible-verse" && typeof n.mentionName == "string" && t.push("\n", n.mentionName, "\n");
+	for (let [e, r] of Object.entries(n)) e !== "type" && typeof r == "object" && r && MF(r, t);
+	Array.isArray(n.children) && !fF.has(r) && t.push("\n");
+}
+function NF(e) {
+	let t = e.trim();
+	if (!t.startsWith("{") && !t.startsWith("[")) return e;
+	let n;
+	try {
+		n = JSON.parse(t);
+	} catch {
+		return e;
+	}
+	if (typeof n != "object" || !n) return e;
+	let r = [];
+	return MF(n.root ?? n, r), r.join("");
+}
+function PF(e) {
+	return jF(NF(e));
+}
+//#endregion
 //#region src/BibleNote.ts
-var { version: cF } = mo, lF = class {
-	static VERSION = cF;
+var { version: FF } = mo, IF = class {
+	static VERSION = FF;
 	props;
 	colorScheme = "light";
 	editorController = null;
@@ -46801,10 +47351,13 @@ var { version: cF } = mo, lF = class {
 	unmount() {
 		this.root?.unmount(), this.root = null, this.editorController = null, this.footerActionButtonController = null, this.settingsController = null;
 	}
+	static getAllShortVersesFromText(e) {
+		return PF(e);
+	}
 };
 //#endregion
 //#region src/ui/Switch.tsx
-function uF({ checked: e, onClick: t, text: n, id: r }) {
+function LF({ checked: e, onClick: t, text: n, id: r }) {
 	let i = oo();
 	return /* @__PURE__ */ U("div", {
 		className: "switch d-block my-1 px-2 py-1 rounded-3",
@@ -46824,7 +47377,7 @@ function uF({ checked: e, onClick: t, text: n, id: r }) {
 }
 //#endregion
 //#region src/Settings.tsx
-function dF({ onColorSchemeChange: e } = {}) {
+function RF({ onColorSchemeChange: e } = {}) {
 	let t = window.location, [n] = M(), { resetOptions: r, setOption: i, settings: a } = or(), { measureTypingPerf: o, isDarkMode: s, isRichText: c, hasNestedTables: l, isMaxLength: u, hasLinkAttributes: d, isCharLimit: f, isCharLimitUtf8: p, isAutocomplete: m, showTreeView: h, showNestedEditorTreeView: g, showTableOfContents: _, shouldUseLexicalContextMenu: v, shouldPreserveNewLinesInMarkdown: y, shouldAllowHighlightingWithBrackets: b, showInvisibleCharacters: x, selectionAlwaysOnDisplay: S, isCodeHighlighted: C, isCodeShiki: w } = a;
 	L(() => {
 		Jn.disableBeforeInput && Gt && console.error("Legacy events are enabled (disableBeforeInput) but CAN_USE_BEFORE_INPUT is true");
@@ -46843,17 +47396,17 @@ function dF({ onColorSchemeChange: e } = {}) {
 		className: "switches p-1",
 		children: [
 			!1,
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => i("measureTypingPerf", !o),
 				checked: o,
 				text: "Measure Perf"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => i("showTreeView", !h),
 				checked: h,
 				text: "Debug View"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => {
 					let t = s ? "light" : "dark";
 					if (e) {
@@ -46865,100 +47418,100 @@ function dF({ onColorSchemeChange: e } = {}) {
 				checked: s,
 				text: "Dark Mode"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => {
 					i("showInvisibleCharacters", !x);
 				},
 				checked: x,
 				text: "Show invisible characters"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => i("showNestedEditorTreeView", !g),
 				checked: g,
 				text: "Nested Editors Debug View"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => {
 					i("isRichText", !c);
 				},
 				checked: c,
 				text: "Rich Text"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => {
 					i("hasNestedTables", !l);
 				},
 				checked: l,
 				text: "Nested Tables"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => i("isCharLimit", !f),
 				checked: f,
 				text: "Char Limit"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => i("isCharLimitUtf8", !p),
 				checked: p,
 				text: "Char Limit (UTF-8)"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => i("hasLinkAttributes", !d),
 				checked: d,
 				text: "Link Attributes"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => i("isMaxLength", !u),
 				checked: u,
 				text: "Max Length"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => i("isAutocomplete", !m),
 				checked: m,
 				text: "Autocomplete"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => {
 					i("showTableOfContents", !_);
 				},
 				checked: _,
 				text: "Table Of Contents"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => {
 					i("shouldUseLexicalContextMenu", !v);
 				},
 				checked: v,
 				text: "Use Lexical Context Menu"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => {
 					i("shouldPreserveNewLinesInMarkdown", !y);
 				},
 				checked: y,
 				text: "Preserve newlines in Markdown"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => {
 					i("shouldAllowHighlightingWithBrackets", !b);
 				},
 				checked: b,
 				text: "Use Brackets for Highlighting"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => {
 					i("selectionAlwaysOnDisplay", !S);
 				},
 				checked: S,
 				text: "Retain selection"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => {
 					i("isCodeHighlighted", !C);
 				},
 				checked: C,
 				text: "Enable Code Highlighting"
 			}),
-			/* @__PURE__ */ H(uF, {
+			/* @__PURE__ */ H(LF, {
 				onClick: () => {
 					i("isCodeShiki", !w);
 				},
@@ -46979,13 +47532,13 @@ function dF({ onColorSchemeChange: e } = {}) {
 }
 //#endregion
 //#region src/params/BibleNoteSettings.tsx
-function fF({ setColorScheme: e }) {
-	return /* @__PURE__ */ H(dF, { onColorSchemeChange: (t) => {
+function zF({ setColorScheme: e }) {
+	return /* @__PURE__ */ H(RF, { onColorSchemeChange: (t) => {
 		e(t);
 	} });
 }
 //#endregion
 //#region src/lib.ts
-var pF = lF;
+var BF = IF;
 //#endregion
-export { Yn as BIBLE_NOTE_STORAGE_MANAGER_KEYS, lF as BibleNote, fF as BibleNoteSettings, Wl as EDITOR_STATE_LOCAL_STORAGE_KEY, Ui as LocationsLookupManager, Ei as NamesLookupManager, ho as applyBibleNoteColorScheme, go as clearBibleNoteColorScheme, lr as createBrowserStorageManager, pF as default, di as getLookupRecordValues, Li as normalizeMentionNameType, Gi as parseMentionLocationMatch, hi as parseMentionLocationMatches, Mi as parseMentionNameMatch, Yi as parseMentionNameMatches };
+export { Yn as BIBLE_NOTE_STORAGE_MANAGER_KEYS, IF as BibleNote, zF as BibleNoteSettings, Wl as EDITOR_STATE_LOCAL_STORAGE_KEY, Ui as LocationsLookupManager, Ei as NamesLookupManager, ho as applyBibleNoteColorScheme, go as clearBibleNoteColorScheme, lr as createBrowserStorageManager, BF as default, di as getLookupRecordValues, Li as normalizeMentionNameType, Gi as parseMentionLocationMatch, hi as parseMentionLocationMatches, Mi as parseMentionNameMatch, Yi as parseMentionNameMatches };

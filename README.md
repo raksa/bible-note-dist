@@ -116,11 +116,26 @@ names.searchByShortVerse("EXO 6:23"); // the names that verse mentions
 names.nameTypes; // types present in the data, most common first
 ```
 
+`BibleNote.getAllShortVersesFromText` bridges the two: it reads every verse a
+note refers to — Bible verse mentions and references written in the prose alike
+— and returns them as the short keys the managers index by. It is static, so it
+also works on plain text such as a pasted passage:
+
+```typescript
+BibleNote.getAllShortVersesFromText(bibleNote.content);
+// ["GEN 1:1", "GEN 1:2", "GEN 1:3", "JHN 3:16"]
+```
+
+References are returned in document order without duplicates. A range inside
+one chapter is expanded verse by verse; a range crossing a chapter boundary
+(`Genesis 1:31-2:3`) keeps only its two endpoints, since the package bundles no
+per-chapter verse counts.
+
 ## Exports
 
 | Export | Kind | Purpose |
 | --- | --- | --- |
-| `BibleNote` | class | The editor: `render`, `unmount`, `addText`, `searchText`, `content`, `isReadOnly`, footer action buttons, colour scheme |
+| `BibleNote` | class | The editor: `render`, `unmount`, `addText`, `searchText`, `content`, `isReadOnly`, footer action buttons, colour scheme, and the static `getAllShortVersesFromText` |
 | `BibleNoteSettings` | component | Settings panel, passed through `render(el, { settings })` |
 | `createBrowserStorageManager` | function | `localStorage`-backed `BibleNoteStorageManager` |
 | `applyBibleNoteColorScheme` / `clearBibleNoteColorScheme` | function | Toggle the `light`/`dark` body classes |

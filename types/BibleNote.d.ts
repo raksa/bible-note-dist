@@ -46,6 +46,15 @@ declare class BibleNote {
     searchText(query: string | null): void;
     render(containerElement: HTMLElement, options?: BibleNoteRenderOptions): void;
     unmount(): void;
+    /**
+     * Every short verse reference (`GEN 1:1`) the given note content mentions, in
+     * document order and without duplicates. Takes what `content` returns — a
+     * serialized editor state — or plain text, and reads both the Bible verse
+     * mentions and any reference written in the prose. Ranges inside one chapter
+     * are expanded verse by verse; a range crossing a chapter boundary keeps only
+     * its endpoints, because per-chapter verse counts are not bundled here.
+     */
+    static getAllShortVersesFromText(lexicalText: string): Array<string>;
 }
 export { BibleNote };
 export default BibleNote;
