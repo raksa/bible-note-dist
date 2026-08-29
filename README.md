@@ -116,6 +116,59 @@ names.searchByShortVerse("EXO 6:23"); // the names that verse mentions
 names.nameTypes; // types present in the data, most common first
 ```
 
+### Translated datasets
+
+A record in a translated dataset carries the KJV English name in `kjvName`
+alongside its own translated `name`. The managers index both, so the same
+manager answers a query in either language, ranking an English hit exactly the
+way it ranks a native-language one:
+
+```typescript
+const names = NamesLookupManager.fromRawDataset({ km: khmerNamesMap }, "km");
+
+names.searchNames("Genesis"); // finds the record named "លោកុប្បត្តិ"
+names.searchNames("លោកុប្បត្តិ"); // and so does its own name
+```
+
+The built-in UI shows the English name beside the translated one — in the
+lookup panel, the mention typeahead, the hover card and the advanced panel.
+`getMentionKjvName(record)` is the rule it follows: the English name, or `null`
+when there is nothing to add (an untranslated dataset, or a record whose
+translated name is the English one anyway).
+
+```typescript
+import { getMentionKjvName } from "bible-note";
+
+getMentionKjvName(record); // "Genesis" | null
+```
+
+An untranslated dataset such as the KJV one carries no `kjvName` at all, and
+everything above is a no-op for it.
+
+### Styling a dataset
+
+Both managers take an optional third argument: a plain CSS style object, merged
+into every surface the built-in UI renders that dataset on — the mention
+typeahead popup, the hover card, the advanced panel, and the lookup panel's list
+and search box. A dataset in a script the editor's own font does not cover can
+therefore carry its own `fontFamily`:
+
+```typescript
+const locations = LocationsLookupManager.fromRawDataset(
+  { km: khmerLocationsMap },
+  "km",
+  { fontFamily: "Battambang, serif" },
+);
+
+locations.style; // read it back; assignable, too
+```
+
+The two managers are styled independently, so a Khmer location dataset can sit
+beside an English name one. Anything a React `style` prop accepts works, but a
+hover card's own positioning always wins over the style. Plugins read `style` as
+they render, so replacing it after the editor is mounted only shows up on the
+next render.
+
 `BibleNote.getAllShortVersesFromText` bridges the two: it reads every verse a
 note refers to — Bible verse mentions and references written in the prose alike
 — and returns them as the short keys the managers index by. It is static, so it
@@ -144,8 +197,10 @@ per-chapter verse counts.
 | `BibleNoteFooterActionButton`, `BibleNoteFooterActionButtons` | type | Footer action button descriptors |
 | `NamesLookupManager`, `LocationsLookupManager` | class | Own the name/location datasets: ranked search, id/name lookup, pagination, verse lookup |
 | `parseMentionNameMatch(es)`, `parseMentionLocationMatch(es)`, `getLookupRecordValues`, `normalizeMentionNameType` | function | Dataset normalization helpers the managers use |
+| `getMentionKjvName` | function | The KJV English name to show beside a translated record's name, or `null` |
 | `MentionNameMatch`, `MentionLocationMatch`, `MentionNamePreview`, `MentionLocationPreview` | type | Name/location record shapes |
 | `NamesLookupManagerDataMap`, `LocationsLookupManagerDataMap`, `LookupPaginationResult` | type | Manager constructor input and search results |
+| `LookupManagerStyle` | type | The extra CSS style a manager renders its dataset with |
 | `FilePathResolver`, `FileRevealer`, `FilePathResolverContext` | type | Media file path hooks |
 | `ExtraFontFamilyOption`, `FontFamilyOption` | type | Extra font families for the editor and sticky notes |
 | `BibleNoteStorageManager` | type | Storage adapter contract |

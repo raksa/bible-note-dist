@@ -5,9 +5,17 @@
  * LICENSE file in the root directory of this source tree.
  *
  */
+import type { CSSProperties } from 'react';
 import type { MentionLocationMatch, MentionNameMatch, MentionNameType, VerseRecordIdsMap } from './lookupTypes';
 export type { MentionLocationCoordinates, MentionLocationLink, MentionLocationMatch, MentionLocationPreview, MentionNameLink, MentionNameMatch, MentionNamePreview, MentionNameType, MentionNameYearRange, VerseRecordIdsMap, } from './lookupTypes';
-export { getLookupRecordValues, normalizeMentionNameType, parseMentionLocationMatch, parseMentionLocationMatches, parseMentionNameMatch, parseMentionNameMatches, } from './lookupTypes';
+export { getLookupRecordValues, getMentionKjvName, normalizeMentionNameType, parseMentionLocationMatch, parseMentionLocationMatches, parseMentionNameMatch, parseMentionNameMatches, } from './lookupTypes';
+/**
+ * Extra inline style the UI applies wherever it renders one manager's records —
+ * the mention popup and hover card, the advanced panel, and the lookup list.
+ * Its purpose is a dataset-wide `fontFamily` for a language the editor's own
+ * font does not cover; anything a `style` attribute accepts works.
+ */
+export type LookupManagerStyle = CSSProperties;
 export type LookupSearchOptions = {
     lang?: string;
     limit?: number;
@@ -55,6 +63,7 @@ export type LocationsLookupManagerDataMap = {
 type LookupRecordLike = {
     id: string;
     name: string;
+    kjvName: string | null;
     oldName: string | null;
     matterRange: number;
 };
@@ -64,6 +73,7 @@ type LookupIndex<TRecord extends LookupRecordLike> = {
     byName: Map<string, Array<TRecord>>;
     searchText: Array<string>;
     nameLower: Array<string>;
+    kjvNameLower: Array<string>;
     verseRecordIds: VerseRecordIdsMap;
     queryCache: Map<string, Array<TRecord>>;
 };
@@ -80,10 +90,19 @@ declare abstract class LookupManager<TRecord extends LookupRecordLike, TLangData
         [langCode: string]: TLangData;
     };
     private currentDefaultLang;
+    private currentStyle;
     private readonly indexes;
     constructor(dataMap: {
         [langCode: string]: TLangData;
-    }, defaultLang: string, dataMapLabel: string);
+    }, defaultLang: string, dataMapLabel: string, style?: LookupManagerStyle);
+    /**
+     * The host-supplied style for this dataset, or `undefined` when it gave none.
+     * The UI merges it into the containers that render these records; like
+     * `defaultLang` it is read at render time, so a host that changes it after
+     * mounting must also make the editor re-render.
+     */
+    get style(): LookupManagerStyle | undefined;
+    set style(style: LookupManagerStyle | undefined);
     get defaultLang(): string;
     set defaultLang(lang: string);
     get langs(): ReadonlyArray<string>;
@@ -118,7 +137,7 @@ declare abstract class LookupManager<TRecord extends LookupRecordLike, TLangData
 }
 export declare class NamesLookupManager extends LookupManager<MentionNameMatch, NamesLookupManagerLangData> {
     private readonly nameTypeCounts;
-    constructor(dataMap: NamesLookupManagerDataMap, defaultLang: string);
+    constructor(dataMap: NamesLookupManagerDataMap, defaultLang: string, style?: LookupManagerStyle);
     /**
      * Builds a manager straight from the generated dataset files, i.e. whatever
      * `fetch('data/KJV/namesMap.json')` resolved to, keyed by language code. Use this
@@ -126,7 +145,7 @@ export declare class NamesLookupManager extends LookupManager<MentionNameMatch, 
      */
     static fromRawDataset(rawDataMap: {
         [langCode: string]: unknown;
-    }, defaultLang: string): NamesLookupManager;
+    }, defaultLang: string, style?: LookupManagerStyle): NamesLookupManager;
     /** An empty manager, used wherever a host has not supplied a dataset yet. */
     static createEmpty(): NamesLookupManager;
     /**
@@ -143,7 +162,7 @@ export declare class NamesLookupManager extends LookupManager<MentionNameMatch, 
     protected getVerseRecordIds(langData: NamesLookupManagerLangData): VerseRecordIdsMap;
 }
 export declare class LocationsLookupManager extends LookupManager<MentionLocationMatch, LocationsLookupManagerLangData> {
-    constructor(dataMap: LocationsLookupManagerDataMap, defaultLang: string);
+    constructor(dataMap: LocationsLookupManagerDataMap, defaultLang: string, style?: LookupManagerStyle);
     /**
      * Builds a manager straight from the generated dataset files, i.e. whatever
      * `fetch('data/KJV/locationsMap.json')` resolved to, keyed by language code.
@@ -152,7 +171,7 @@ export declare class LocationsLookupManager extends LookupManager<MentionLocatio
      */
     static fromRawDataset(rawDataMap: {
         [langCode: string]: unknown;
-    }, defaultLang: string): LocationsLookupManager;
+    }, defaultLang: string, style?: LookupManagerStyle): LocationsLookupManager;
     /** An empty manager, used wherever a host has not supplied a dataset yet. */
     static createEmpty(): LocationsLookupManager;
     searchLocations(query: string, options?: LookupSearchOptions): Array<MentionLocationMatch>;

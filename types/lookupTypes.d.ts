@@ -33,6 +33,16 @@ export type MentionNameLink = {
 export type MentionNameMatch = {
     id: string;
     name: string;
+    /**
+     * The KJV English name, carried only by translated datasets (the km-BFBS
+     * mirror and any future one) where `name` holds the translated form. `null`
+     * on the KJV dataset itself, whose `name` already is the English one.
+     *
+     * The lookup managers index it alongside `name`, so a translated dataset
+     * stays searchable by its English name, and the UI shows it beside the
+     * translated name the way a Bible book reads "លោកុប្បត្តិ (Genesis)".
+     */
+    kjvName: string | null;
     oldName: string | null;
     title: string;
     description: string;
@@ -65,6 +75,8 @@ export type MentionLocationLink = {
 export type MentionLocationMatch = {
     id: string;
     name: string;
+    /** The KJV English name; see {@link MentionNameMatch.kjvName}. */
+    kjvName: string | null;
     oldName: string | null;
     title: string;
     description: string;
@@ -81,6 +93,16 @@ export type MentionLocationMatch = {
 export type MentionLocationPreview = Omit<MentionLocationMatch, 'id'> & {
     id: string | null;
 };
+/**
+ * The English name worth showing beside a record's own name, or `null` when
+ * there is nothing to add — an untranslated (KJV) dataset, or a record whose
+ * translated name is the English one anyway. Display it the way a Bible book
+ * reads in a translated UI: `លោកុប្បត្តិ (Genesis)`.
+ */
+export declare function getMentionKjvName(record: {
+    name: string;
+    kjvName: string | null;
+}): string | null;
 export declare function getTrimmedString(value: unknown): string;
 export declare function getNullableTrimmedString(value: unknown): string | null;
 export declare function getTrimmedStringArray(value: unknown): Array<string>;
