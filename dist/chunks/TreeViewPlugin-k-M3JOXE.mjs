@@ -4039,7 +4039,7 @@ function Mo(e, t, n, r, i) {
 }
 //#endregion
 //#region src/nodes/MediaNode.tsx
-var No = jn.lazy(() => import("./MediaComponent-YPx8N7xv.mjs"));
+var No = jn.lazy(() => import("./MediaComponent-CyOn1hEA.mjs"));
 function Po(e) {
 	return e.parentElement != null && e.parentElement.tagName === "LI" && e.previousSibling === null && e.getAttribute("aria-roledescription") === "checkbox";
 }
@@ -4987,11 +4987,11 @@ function Gs(e) {
 }
 //#endregion
 //#region src/plugins/MentionReferenceText/index.tsx
-var Ks = /\[([^\]]+)\]\((?:name-id|location-id|verse-key):\/\/[^)]*\)/g;
+var Ks = /\[([^\]]+)\]\((?:name-id|location-id|verse-key|chapter-key|book-key):\/\/[^)]*\)/g;
 function qs(e) {
 	return e.replace(Ks, "$1");
 }
-var Js = /\[([^\]]+)\]\((name-id|location-id|verse-key):\/\/([^)]*)\)/g;
+var Js = /\[([^\]]+)\]\((name-id|location-id|verse-key|chapter-key|book-key):\/\/([^)]*)\)/g;
 function Ys(e) {
 	let t = [], n = new RegExp(Js), r = 0, i;
 	for (; (i = n.exec(e)) !== null;) {
@@ -5000,7 +5000,7 @@ function Ys(e) {
 			text: e.slice(r, i.index)
 		});
 		let a = i[1], o = i[2], s = i[3].trim();
-		s === "" ? t.push({
+		s === "" || o === "chapter-key" || o === "book-key" ? t.push({
 			kind: "text",
 			text: a
 		}) : o === "name-id" ? t.push({

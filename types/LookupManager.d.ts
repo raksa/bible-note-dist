@@ -121,7 +121,7 @@ export declare class NamesLookupManager extends LookupManager<MentionNameMatch, 
     constructor(dataMap: NamesLookupManagerDataMap, defaultLang: string);
     /**
      * Builds a manager straight from the generated dataset files, i.e. whatever
-     * `fetch('data/namesMap.json')` resolved to, keyed by language code. Use this
+     * `fetch('data/KJV/namesMap.json')` resolved to, keyed by language code. Use this
      * unless you already hold normalized {@link MentionNameMatch} records.
      */
     static fromRawDataset(rawDataMap: {
@@ -146,7 +146,7 @@ export declare class LocationsLookupManager extends LookupManager<MentionLocatio
     constructor(dataMap: LocationsLookupManagerDataMap, defaultLang: string);
     /**
      * Builds a manager straight from the generated dataset files, i.e. whatever
-     * `fetch('data/locationsMap.json')` resolved to, keyed by language code.
+     * `fetch('data/KJV/locationsMap.json')` resolved to, keyed by language code.
      * Older generated files stored the records under `namesMap`, so both keys are
      * accepted.
      */
