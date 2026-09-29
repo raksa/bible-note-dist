@@ -1,8 +1,0 @@
-const e=require("./chunk-Y2CYZVJY-CnmLqFtv.cjs");require("./src-CR--T_NF.cjs"),require("./chunk-WYO6CB5R-DcCdMO6a.cjs"),require("./chunk-ICXQ74PX-C8zL9MF5.cjs"),require("./chunk-ZIRB5QZD-BU6XQUGC.cjs"),require("./chunk-C7G6YPKG-BzHtH4uo.cjs"),require("./chunk-OGEWGWER-ChDAn3O_.cjs"),require("./chunk-HOUHSVGY-BI_N09es.cjs"),require("./chunk-Q4XR5HBZ-DPOjOWqI.cjs"),require("./chunk-ZGVPDNZ5-f2YTDAUj.cjs"),require("./chunk-7BUUIJ7U-MzS1pW_S.cjs"),require("./chunk-52WLFC77-CTLfLi1i.cjs"),require("./chunk-FWX5IMBZ-CcH1ucPt.cjs"),require("./chunk-32BRIVSS-gGWUZQaY.cjs"),require("./chunk-XXDRQBXY-gWcN0uCZ.cjs"),require("./chunk-VR4S4FIN-BQqPbbiF.cjs");const t=require("./chunk-PUDLZKDR-CTtH8sLS.cjs");var n=t.t({defaultLayout:`swimlane`,styles:e.n(e=>`${t.r(e)}
-  .swimlane.cluster rect {
-    stroke: ${e.clusterBorder} !important;
-  }
-  [data-look="neo"].cluster rect {
-    filter: none;
-  }
-`,`getStyles`)});exports.diagram=n;

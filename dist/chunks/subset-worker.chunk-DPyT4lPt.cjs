@@ -1,1 +1,0 @@
-require("./chunk-SRAX5OIU-C0DwbKUW.cjs");const e=require("./chunk-EIO257PC-CGNIYIiQ.cjs");var t={}.url?new URL({}.url):void 0;typeof window>`u`&&typeof self<`u`&&(self.onmessage=async t=>{switch(t.data.command){case e.n.Subset:let n=await e.r(t.data.arrayBuffer,t.data.codePoints);self.postMessage(n,{transfer:[n]});break}}),exports.WorkerUrl=t;

@@ -96,6 +96,21 @@ const bibleNote = new BibleNote({
 bibleNote.render(document.getElementById("root")!);
 ```
 
+### Microsoft Word round trips
+
+The editor footer has separate Word import and export buttons. Export creates a
+standard `.docx` that opens in Microsoft Word and includes a private BibleNote
+round-trip copy of the editor state. Importing that file back restores the full
+editable document, including editor-specific content that Word cannot represent
+natively. If Word has removed that private data, or the file came from another
+application, BibleNote falls back to Word-content conversion and preserves the
+document's text, headings, emphasis, lists, tables, links, and embedded images;
+Word-only layout details may be simplified.
+
+The existing Import and Export buttons remain the lossless JSON backup path.
+In the Electron app, both Word and lossless editor files use native Open and
+Save dialogs; browser builds continue to use the browser picker and download.
+
 `namesMap` and `locationsMap` are the host's own datasets — the package bundles
 none of its own.
 
