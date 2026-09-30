@@ -1,6 +1,6 @@
 import { F as e, Fr as t, Ht as n, Sn as r, Yn as i, jn as a, oi as o, tt as s } from "./Lexical.prod-DYDuARMX.mjs";
 import { t as c } from "./useLexicalEditable.prod-CgMasHPY.mjs";
-import { i as l, n as u, t as d } from "./KatexRenderer-CuMIO8x8.mjs";
+import { i as l, n as u, t as d } from "./KatexRenderer-DcY1rMT-.mjs";
 import { forwardRef as f, useCallback as p, useEffect as m, useRef as h, useState as g } from "react";
 import { Fragment as _, jsx as v, jsxs as y } from "react/jsx-runtime";
 //#region src/ui/EquationEditor.tsx

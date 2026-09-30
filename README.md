@@ -107,6 +107,18 @@ application, BibleNote falls back to Word-content conversion and preserves the
 document's text, headings, emphasis, lists, tables, links, and embedded images;
 Word-only layout details may be simplified.
 
+Because a Word document has no hover cards, the export spells out what they
+show. Every person, place and Bible-verse mention links to an entry in a
+**References** appendix after the note: the name or location record from
+`namesMap` / `locationsMap` (description, family, locations, links,
+coordinates) and the verse text, with verse references resolved through
+`shortToVerseData` and related people and places through
+`verseFullTextToListShorts`. Each mention also carries a short screen tip.
+Equations become editable Word equations. Sticky notes, drawings and embed
+thumbnails are packaged as pictures. Checklists, collapsibles, column layouts,
+highlights and code blocks are rewritten into forms Word renders. Re-importing
+the file leaves the appendix out.
+
 The existing Import and Export buttons remain the lossless JSON backup path.
 In the Electron app, both Word and lossless editor files use native Open and
 Save dialogs; browser builds continue to use the browser picker and download.

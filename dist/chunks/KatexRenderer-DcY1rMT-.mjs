@@ -21822,7 +21822,7 @@ var Oa = function(e, t) {
 		PathNode: Ke,
 		LineNode: qe
 	}
-}, Na = n.lazy(() => import("./EquationComponent-CTel0o5k.mjs"));
+}, Na = n.lazy(() => import("./EquationComponent-C1lb__2C.mjs"));
 function Pa(e) {
 	let t = e.getAttribute("data-lexical-equation"), n = e.getAttribute("data-lexical-inline") === "true";
 	return t = atob(t || ""), t ? { node: Ia(t, n) } : null;
@@ -21954,4 +21954,4 @@ function za({ equation: e, inline: t, onDoubleClick: n }) {
 	] });
 }
 //#endregion
-export { Fa as a, La as i, Ra as n, Ia as r, za as t };
+export { Fa as a, La as i, Ra as n, Ma as o, Ia as r, za as t };
