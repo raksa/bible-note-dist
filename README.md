@@ -1,4 +1,4 @@
-# bible-note
+# Bible Note
 
 A Bible study tool for taking notes and organizing your thoughts.
 

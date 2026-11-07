@@ -1,8 +1,17 @@
 {
   "name": "bible-note",
-  "version": "0.4.4",
+  "version": "0.4.6-dev",
   "description": "A Bible study tool for taking notes and organizing your thoughts.",
   "license": "MIT",
+  "author": "raksa <eng.raksa@gmail.com>",
+  "homepage": "https://github.com/raksa/bible-note-dist#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raksa/bible-note-dist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raksa/bible-note-dist/issues"
+  },
   "type": "module",
   "main": "./dist/bible-note.cjs",
   "module": "./dist/bible-note.mjs",
