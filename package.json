@@ -1,6 +1,6 @@
 {
   "name": "bible-note",
-  "version": "0.4.4-dev",
+  "version": "0.4.4",
   "description": "A Bible study tool for taking notes and organizing your thoughts.",
   "license": "MIT",
   "type": "module",
