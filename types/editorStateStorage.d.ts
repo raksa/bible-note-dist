@@ -1,3 +1,8 @@
+/**
+ * The storage key of the note itself. The editor never hands this key to the
+ * host's `storageManager`: reads and writes of it go to `loadData` / `saveData`
+ * instead.
+ */
 export declare const EDITOR_STATE_LOCAL_STORAGE_KEY = "lexical-playground-editor-state";
 export declare const SHARED_EDITOR_STATE_QUERY_PARAM = "editor-state";
 export declare const SHARED_EDITOR_STATE_PASSWORD_PREFIX = "pwdecrypted:";

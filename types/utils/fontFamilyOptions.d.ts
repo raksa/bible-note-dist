@@ -5,11 +5,17 @@
  * LICENSE file in the root directory of this source tree.
  *
  */
+/** A font in the toolbar's font menu: `[fontFamily, label, languageCode]`. */
 export type FontFamilyOption = readonly [
     fontFamily: string,
     label: string,
     language: string
 ];
+/**
+ * A host font added to the editor: `[fontFamily, languageCode]`, e.g.
+ * `['Battambang', 'km']`. The language code is what `getLangCode` returns
+ * for text that should use this font.
+ */
 export type ExtraFontFamilyOption = readonly [
     fontFamily: string,
     language: string

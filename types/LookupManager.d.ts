@@ -16,47 +16,72 @@ export { getLookupRecordValues, getMentionKjvName, normalizeMentionNameType, par
  * font does not cover; anything a `style` attribute accepts works.
  */
 export type LookupManagerStyle = CSSProperties;
+/** Options for `searchNames` / `searchLocations`. */
 export type LookupSearchOptions = {
+    /** Language to search; falls back to `defaultLang` when absent or unknown. */
     lang?: string;
+    /** Maximum number of results; all matches when omitted. */
     limit?: number;
 };
+/** Options for the `…Pagination` searches. */
 export type LookupPaginationOptions = {
+    /** Search text; empty or omitted lists every record in importance order. */
     query?: string;
+    /** Language to search; falls back to `defaultLang` when absent or unknown. */
     lang?: string;
+    /** 1-based page number, clamped to the available pages. Defaults to 1. */
     page?: number;
+    /** Records per page (at least 1). Defaults to 20. */
     pageSize?: number;
 };
+/** One page of search results. */
 export type LookupPaginationResult<TRecord> = {
+    /** The language actually searched. */
     lang: string;
+    /** Matches across all pages. */
     totalRecords: number;
+    /** The page returned, after clamping. */
     page: number;
+    /** Number of pages; at least 1, even with no matches. */
     totalPages: number;
     pageSize: number;
+    /** This page's records. */
     records: Array<TRecord>;
 };
+/** `LookupSearchOptions` plus a name-type filter. */
 export type NamesLookupSearchOptions = LookupSearchOptions & {
+    /** Only records of this type; applied before `limit`. */
     type?: MentionNameType;
 };
+/** `LookupPaginationOptions` plus a name-type filter. */
 export type NamesLookupPaginationOptions = LookupPaginationOptions & {
+    /** Only records of this type. */
     type?: MentionNameType;
 };
+/** How many records of one name type a dataset holds. */
 export type NameTypeCount = {
     type: MentionNameType;
     count: number;
 };
+/** One language's name dataset, as `NamesLookupManager`'s constructor takes it. */
 export type NamesLookupManagerLangData = {
+    /** The normalized records (see `parseMentionNameMatches`). */
     records: ReadonlyArray<MentionNameMatch>;
     /** Short verse key (e.g. `"EXO 6:23"`) to the ids of the names it mentions. */
     versePersonsMap?: VerseRecordIdsMap;
 };
+/** Name datasets keyed by language code, e.g. `{ en: …, km: … }`. */
 export type NamesLookupManagerDataMap = {
     [langCode: string]: NamesLookupManagerLangData;
 };
+/** One language's location dataset, as `LocationsLookupManager`'s constructor takes it. */
 export type LocationsLookupManagerLangData = {
+    /** The normalized records (see `parseMentionLocationMatches`). */
     records: ReadonlyArray<MentionLocationMatch>;
     /** Short verse key (e.g. `"EXO 6:23"`) to the ids of the locations it mentions. */
     verseLocationsMap?: VerseRecordIdsMap;
 };
+/** Location datasets keyed by language code, e.g. `{ en: …, km: … }`. */
 export type LocationsLookupManagerDataMap = {
     [langCode: string]: LocationsLookupManagerLangData;
 };
@@ -103,14 +128,24 @@ declare abstract class LookupManager<TRecord extends LookupRecordLike, TLangData
      */
     get style(): LookupManagerStyle | undefined;
     set style(style: LookupManagerStyle | undefined);
+    /**
+     * The language used when a call names none (or names one this manager does
+     * not hold). Assigning a language the data map lacks throws.
+     */
     get defaultLang(): string;
     set defaultLang(lang: string);
+    /** The language codes this manager holds data for. */
     get langs(): ReadonlyArray<string>;
     /** Total number of records in a language, ignoring any query. */
     getRecordCount(lang?: string): number;
     /** Every record in a language, in importance order. */
     getAllRecords(lang?: string): Array<TRecord>;
+    /** The record with this id (whitespace-trimmed), or `null`. */
     getRecordById(id: string, lang?: string): TRecord | null;
+    /**
+     * The records for these ids, in the order given; unknown and repeated ids
+     * are skipped.
+     */
     getRecordsByIds(ids: ReadonlyArray<string>, lang?: string): Array<TRecord>;
     /**
      * Every record carrying exactly this name. Names are not unique in the
@@ -135,8 +170,18 @@ declare abstract class LookupManager<TRecord extends LookupRecordLike, TLangData
     protected abstract getVerseRecordIds(langData: TLangData): VerseRecordIdsMap;
     private getRankedMatches;
 }
+/**
+ * Owns the person/name dataset(s): ranked search, id and name lookup,
+ * pagination, name-type counts and verse → names lookup. Has no editor
+ * dependency, so a host can use it to build its own UI. Indexes are built
+ * lazily per language on first use.
+ */
 export declare class NamesLookupManager extends LookupManager<MentionNameMatch, NamesLookupManagerLangData> {
     private readonly nameTypeCounts;
+    /**
+     * Takes already-normalized records; prefer `fromRawDataset` for the generated
+     * dataset files. Throws when `dataMap` has no `defaultLang` entry.
+     */
     constructor(dataMap: NamesLookupManagerDataMap, defaultLang: string, style?: LookupManagerStyle);
     /**
      * Builds a manager straight from the generated dataset files, i.e. whatever
@@ -155,13 +200,31 @@ export declare class NamesLookupManager extends LookupManager<MentionNameMatch, 
     getNameTypes(lang?: string): ReadonlyArray<NameTypeCount>;
     /** The name types present in the default language. */
     get nameTypes(): ReadonlyArray<NameTypeCount>;
+    /**
+     * Names matching `query`. Case-insensitive substring match against the name, the KJV English
+     * name (translated datasets) and the former name. Ranked exact, then prefix,
+     * then substring — the better of the two names counts — and by importance
+     * (`matterRange`, then alphabetical) within a tier. An empty query returns
+     * every record in importance order.
+     */
     searchNames(query: string, options?: NamesLookupSearchOptions): Array<MentionNameMatch>;
+    /** `searchNames`, one page at a time (20 records per page by default). */
     searchNamesPagination(options?: NamesLookupPaginationOptions): LookupPaginationResult<MentionNameMatch>;
     /** The names a short verse key (e.g. `"EXO 6:23"`) mentions. */
     searchByShortVerse(shortVerse: string, lang?: string): Array<MentionNameMatch>;
     protected getVerseRecordIds(langData: NamesLookupManagerLangData): VerseRecordIdsMap;
 }
+/**
+ * Owns the place/location dataset(s): ranked search, id and name lookup,
+ * pagination and verse → locations lookup. Has no editor dependency, so a host
+ * can use it to build its own UI. Indexes are built lazily per language on
+ * first use.
+ */
 export declare class LocationsLookupManager extends LookupManager<MentionLocationMatch, LocationsLookupManagerLangData> {
+    /**
+     * Takes already-normalized records; prefer `fromRawDataset` for the generated
+     * dataset files. Throws when `dataMap` has no `defaultLang` entry.
+     */
     constructor(dataMap: LocationsLookupManagerDataMap, defaultLang: string, style?: LookupManagerStyle);
     /**
      * Builds a manager straight from the generated dataset files, i.e. whatever
@@ -174,7 +237,15 @@ export declare class LocationsLookupManager extends LookupManager<MentionLocatio
     }, defaultLang: string, style?: LookupManagerStyle): LocationsLookupManager;
     /** An empty manager, used wherever a host has not supplied a dataset yet. */
     static createEmpty(): LocationsLookupManager;
+    /**
+     * Locations matching `query`. Case-insensitive substring match against the name, the KJV English
+     * name (translated datasets) and the former name. Ranked exact, then prefix,
+     * then substring — the better of the two names counts — and by importance
+     * (`matterRange`, then alphabetical) within a tier. An empty query returns
+     * every record in importance order.
+     */
     searchLocations(query: string, options?: LookupSearchOptions): Array<MentionLocationMatch>;
+    /** `searchLocations`, one page at a time (20 records per page by default). */
     searchLocationsPagination(options?: LookupPaginationOptions): LookupPaginationResult<MentionLocationMatch>;
     /** The locations a short verse key (e.g. `"EXO 6:23"`) mentions. */
     searchByShortVerse(shortVerse: string, lang?: string): Array<MentionLocationMatch>;
