@@ -7,6 +7,7 @@
  */
 import type { LibraryItems } from './excalidrawTypes';
 import { type JSX, type ReactNode } from 'react';
+import { type BibleNoteFloatingActionButtonControllerOwner } from './floatingActionButtons';
 import { type BibleNoteFooterActionButtonControllerOwner } from './footerActionButtons';
 import type { LocationsLookupManager, NamesLookupManager } from './LookupManager';
 import type { ExtraFontFamilyOption } from './utils/fontFamilyOptions';
@@ -23,6 +24,7 @@ type PlaygroundAppProps = {
     excalidrawLibraryItems?: LibraryItems;
     excalidrawLoadLibrariesFileList?: () => string[];
     excalidrawSaveLibrariesFile?: (librariesFile: string) => void;
+    floatingActionButtonController?: BibleNoteFloatingActionButtonControllerOwner;
     footerActionButtonController?: BibleNoteFooterActionButtonControllerOwner;
     isMinimize: boolean;
     isOnApp: boolean;
@@ -63,6 +65,6 @@ type BibleNoteEditorController = {
 export type BibleNoteEditorControllerOwner = {
     connectEditorController: (controller: BibleNoteEditorController) => () => void;
 };
-export declare function BibleNoteApp({ detectTextLanguage, editorController, editorExtraFontFamilies, excalidrawClearLibrariesFileList, excalidrawLibraryItems, excalidrawLoadLibrariesFileList, excalidrawSaveLibrariesFile, footerActionButtonController, isMinimize, isOnApp, print, resolveFilePath, revealFile, settings, settingsContainerElement, settingsController, stickyNoteExtraFontFamilies, shortToVerseData, verseFullTextToListShorts, changeBibleKey, }: PlaygroundAppProps): JSX.Element;
-export declare function AppComp({ detectTextLanguage, namesLookupManager, locationsLookupManager, editorController, editorExtraFontFamilies, excalidrawClearLibrariesFileList, excalidrawLibraryItems, excalidrawLoadLibrariesFileList, excalidrawSaveLibrariesFile, footerActionButtonController, print, resolveFilePath, revealFile, settings, settingsContainerElement, settingsController, stickyNoteExtraFontFamilies, storageManager, isMinimize, isOnApp, shortToVerseData, verseFullTextToListShorts, changeBibleKey, }: PlaygroundAppProps): JSX.Element;
+export declare function BibleNoteApp({ detectTextLanguage, editorController, editorExtraFontFamilies, excalidrawClearLibrariesFileList, excalidrawLibraryItems, excalidrawLoadLibrariesFileList, excalidrawSaveLibrariesFile, floatingActionButtonController, footerActionButtonController, isMinimize, isOnApp, print, resolveFilePath, revealFile, settings, settingsContainerElement, settingsController, stickyNoteExtraFontFamilies, shortToVerseData, verseFullTextToListShorts, changeBibleKey, }: PlaygroundAppProps): JSX.Element;
+export declare function AppComp({ detectTextLanguage, namesLookupManager, locationsLookupManager, editorController, editorExtraFontFamilies, excalidrawClearLibrariesFileList, excalidrawLibraryItems, excalidrawLoadLibrariesFileList, excalidrawSaveLibrariesFile, floatingActionButtonController, footerActionButtonController, print, resolveFilePath, revealFile, settings, settingsContainerElement, settingsController, stickyNoteExtraFontFamilies, storageManager, isMinimize, isOnApp, shortToVerseData, verseFullTextToListShorts, changeBibleKey, }: PlaygroundAppProps): JSX.Element;
 export {};

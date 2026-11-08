@@ -13,6 +13,7 @@ export { EDITOR_STATE_LOCAL_STORAGE_KEY } from './editorStateStorage';
 export { applyBibleNoteColorScheme, clearBibleNoteColorScheme, } from './params/colorScheme';
 export { BIBLE_NOTE_STORAGE_MANAGER_KEYS, createBrowserStorageManager, } from './storageManager';
 export { getLookupRecordValues, getMentionKjvName, LocationsLookupManager, NamesLookupManager, normalizeMentionNameType, parseMentionLocationMatch, parseMentionLocationMatches, parseMentionNameMatch, parseMentionNameMatches, } from './LookupManager';
+export type { BibleNoteFloatingActionButton, BibleNoteFloatingActionButtonClickEvent, BibleNoteFloatingActionButtons, BibleNoteSelectionPoint, BibleNoteTextSelection, } from './floatingActionButtons';
 export type { BibleNoteFooterActionButton, BibleNoteFooterActionButtonPlacement, BibleNoteFooterActionButtons, } from './footerActionButtons';
 export type { BibleNoteProps, BibleNoteRenderOptions, } from './bibleNoteHelpers';
 export type { LocationsLookupManagerDataMap, LocationsLookupManagerLangData, LookupManagerStyle, LookupPaginationOptions, LookupPaginationResult, LookupSearchOptions, MentionLocationCoordinates, MentionLocationLink, MentionLocationMatch, MentionLocationPreview, MentionNameLink, MentionNameMatch, MentionNamePreview, MentionNameType, MentionNameYearRange, NamesLookupManagerDataMap, NamesLookupManagerLangData, NamesLookupPaginationOptions, NamesLookupSearchOptions, NameTypeCount, VerseRecordIdsMap, } from './LookupManager';

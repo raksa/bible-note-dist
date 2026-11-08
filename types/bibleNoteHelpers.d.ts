@@ -2,6 +2,7 @@ import type { CSSProperties, ReactNode } from 'react';
 import type { LibraryItems } from './excalidrawTypes';
 import type { Root } from 'react-dom/client';
 import type { BibleNoteEditorControllerOwner, BibleNoteSettingsControllerOwner } from './AppComp';
+import type { BibleNoteFloatingActionButtonControllerOwner } from './floatingActionButtons';
 import type { BibleNoteFooterActionButtonControllerOwner } from './footerActionButtons';
 import type { BibleNoteColorScheme } from './params/colorScheme';
 import type { BibleNoteStorageManager } from './storageManager';
@@ -149,10 +150,11 @@ export type BibleNoteRenderOptions = {
     settingsContainerElement?: Element | DocumentFragment;
 };
 export declare function createBibleNoteStorageManager({ loadData, saveData, storageManager, }: BibleNoteProps): BibleNoteStorageManager;
-export declare function renderEditor({ props, containerElement, editorControllerOwner, footerActionButtonControllerOwner, settingsControllerOwner, storageManager, }: {
+export declare function renderEditor({ props, containerElement, editorControllerOwner, floatingActionButtonControllerOwner, footerActionButtonControllerOwner, settingsControllerOwner, storageManager, }: {
     props: BibleNoteProps;
     containerElement: HTMLElement;
     editorControllerOwner: BibleNoteEditorControllerOwner;
+    floatingActionButtonControllerOwner: BibleNoteFloatingActionButtonControllerOwner;
     footerActionButtonControllerOwner: BibleNoteFooterActionButtonControllerOwner;
     settingsControllerOwner: BibleNoteSettingsControllerOwner;
     storageManager: BibleNoteStorageManager;

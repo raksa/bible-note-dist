@@ -1,6 +1,8 @@
+import type { BibleNoteFloatingActionButton } from './floatingActionButtons';
 import type { BibleNoteFooterActionButton } from './footerActionButtons';
 import type { BibleNoteColorScheme } from './params/colorScheme';
 import { type BibleNoteProps, type BibleNoteRenderOptions } from './bibleNoteHelpers';
+export type { BibleNoteFloatingActionButton, BibleNoteFloatingActionButtonClickEvent, BibleNoteFloatingActionButtons, BibleNoteSelectionPoint, BibleNoteTextSelection, } from './floatingActionButtons';
 export type { BibleNoteFooterActionButton, BibleNoteFooterActionButtons, } from './footerActionButtons';
 /**
  * The BibleNote editor. Construct it with the host's datasets and storage
@@ -25,11 +27,14 @@ declare class BibleNote {
     private pendingColorScheme;
     private readOnlyOverride;
     private footerActionButtonController;
-    private footerActionButtons;
+    private readonly footerActionButtons;
+    private floatingActionButtonController;
+    private readonly floatingActionButtons;
     private root;
     private settingsController;
     private readonly editorControllerOwner;
     private readonly footerActionButtonControllerOwner;
+    private readonly floatingActionButtonControllerOwner;
     private readonly storageManager;
     private readonly settingsControllerOwner;
     /** Creates the editor; nothing is rendered until `render` is called. */
@@ -83,13 +88,34 @@ declare class BibleNote {
     getFooterActionButton(id: string): BibleNoteFooterActionButton | null;
     /** Removes the host footer button with this `id`; `false` when there was none. */
     removeFooterActionButton(id: string): boolean;
-    private setFooterActionButton;
-    private getFooterActionButtonsSnapshot;
+    /**
+     * Adds a host button to the floating toolbar that appears over selected
+     * text, after its built-in buttons (after Insert comment). Its `onClick`
+     * receives the selection — text, HTML and range — and can replace the
+     * selected text. A button whose `id` is already present is replaced in
+     * place, keeping its position.
+     */
+    appendFloatingActionButton(actionButton: BibleNoteFloatingActionButton): void;
+    /**
+     * Adds a host button to the floating toolbar before its built-in buttons
+     * (before Bold), ahead of any prepended earlier. A button whose `id` is
+     * already present is replaced in place, keeping its position.
+     */
+    prependFloatingActionButton(actionButton: BibleNoteFloatingActionButton): void;
+    /** The host floating toolbar button with this `id`, or `null`. */
+    getFloatingActionButton(id: string): BibleNoteFloatingActionButton | null;
+    /**
+     * Removes the host floating toolbar button with this `id`; `false` when there
+     * was none.
+     */
+    removeFloatingActionButton(id: string): boolean;
     private syncFooterActionButtons;
+    private syncFloatingActionButtons;
     private runOrQueueEditorAction;
     private connectEditorController;
     private connectSettingsController;
     private connectFooterActionButtonController;
+    private connectFloatingActionButtonController;
     private syncColorSchemeFromSettings;
     /**
      * Drives the editor's find bar. A string opens the bar (or updates the query
@@ -104,8 +130,8 @@ declare class BibleNote {
      */
     render(containerElement: HTMLElement, options?: BibleNoteRenderOptions): void;
     /**
-     * Unmounts the editor. The instance keeps its props and footer buttons and
-     * can be rendered again.
+     * Unmounts the editor. The instance keeps its props, footer buttons and
+     * floating toolbar buttons and can be rendered again.
      */
     unmount(): void;
     /**

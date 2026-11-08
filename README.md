@@ -110,6 +110,60 @@ const bibleNote = new BibleNote({
 bibleNote.render(document.getElementById("root")!);
 ```
 
+### Buttons on the selected-text toolbar
+
+Selecting text in the note pops up a small toolbar over it — Bold, Italic,
+Underline, …, Insert comment. A host adds its own buttons to it with
+`appendFloatingActionButton` (after the built-in buttons) or
+`prependFloatingActionButton` (before them). The editor renders the `<button>`
+itself, so it matches the built-in ones: `children` is only its content, and
+`description` is its tooltip and accessible name. Give a Bootstrap icon the
+`format` class to size and tint it like the others.
+
+```tsx
+bibleNote.appendFloatingActionButton({
+  id: "copy-selected-text",
+  description: "Copy selected text",
+  children: <i className="bi bi-clipboard format" />,
+  onClick: async ({ selection }) => {
+    await navigator.clipboard.writeText(selection.text);
+  },
+});
+
+bibleNote.appendFloatingActionButton({
+  id: "uppercase-selected-text",
+  description: "Make selected text uppercase",
+  isHiddenWhenReadOnly: true,
+  children: <i className="bi bi-alphabet-uppercase format" />,
+  onClick: ({ selection, replaceText }) => {
+    replaceText(selection.text.toUpperCase());
+  },
+});
+
+bibleNote.getFloatingActionButton("copy-selected-text"); // the descriptor, or null
+bibleNote.removeFloatingActionButton("copy-selected-text"); // false when absent
+```
+
+`onClick` receives a `BibleNoteFloatingActionButtonClickEvent`, captured at the
+click:
+
+| Field | What it holds |
+| --- | --- |
+| `id` | The clicked button's `id` |
+| `selection.text` | The selected text as plain text, paragraphs separated by `\n` — what Copy puts on the clipboard as `text/plain` |
+| `selection.html` | The selection as HTML, formatting included — what Copy puts on the clipboard as `text/html` |
+| `selection.start`, `selection.end` | The selection's two ends in document order, each `{ key, offset, type }`: the editor's node key, the character offset in a `'text'` node or the child index in an `'element'` node. Keys identify nodes of the note as it is open now; they are not saved with `content` |
+| `selection.isBackward` | `true` when the user selected from the end back to the start |
+| `selection.domRange` | A copy of the browser's DOM `Range` for the selection, or `null`. Measure the text on screen with `domRange.getBoundingClientRect()`; it stops matching once the note changes |
+| `replaceText(text)` | Replaces the captured range with `text`, inserted the way `addText` inserts it — plain text, paste rules applied, `\n` starts a paragraph; `""` deletes the selected text. It restores the range first, so it works after an `await` or after the user clicked elsewhere. Returns `false`, changing nothing, when the note is read-only or the range no longer holds `selection.text` |
+| `mouseEvent` | The React click event |
+
+Buttons show in a read-only note too, as Insert comment does, unless
+`isHiddenWhenReadOnly` is set. Ids are unique per editor: re-adding an `id`
+replaces that button in place. Like footer buttons, they can be added before
+`render` and are kept across `unmount`. Unlike footer buttons, they take no
+`shortcutKey`.
+
 ### Microsoft Word round trips
 
 The editor footer has separate Word import and export buttons. Export creates a
@@ -229,13 +283,15 @@ per-chapter verse counts.
 
 | Export | Kind | Purpose |
 | --- | --- | --- |
-| `BibleNote` | class | The editor: `render`, `unmount`, `addText`, `searchText`, `content`, `isReadOnly`, footer action buttons, colour scheme, and the static `getAllShortVersesFromText` |
+| `BibleNote` | class | The editor: `render`, `unmount`, `addText`, `searchText`, `content`, `isReadOnly`, footer action buttons, selected-text toolbar buttons, colour scheme, and the static `getAllShortVersesFromText` |
 | `BibleNoteSettings` | component | Settings panel, passed through `render(el, { settings })` |
 | `createBrowserStorageManager` | function | `localStorage`-backed `BibleNoteStorageManager` |
 | `applyBibleNoteColorScheme` / `clearBibleNoteColorScheme` | function | Toggle the `light`/`dark` body classes |
 | `EDITOR_STATE_LOCAL_STORAGE_KEY` | constant | Storage key the editor state is saved under |
 | `BibleNoteProps`, `BibleNoteRenderOptions` | type | Constructor and `render` options |
 | `BibleNoteFooterActionButton`, `BibleNoteFooterActionButtons` | type | Footer action button descriptors |
+| `BibleNoteFloatingActionButton`, `BibleNoteFloatingActionButtons` | type | Selected-text toolbar button descriptors |
+| `BibleNoteFloatingActionButtonClickEvent`, `BibleNoteTextSelection`, `BibleNoteSelectionPoint` | type | What a selected-text toolbar button's `onClick` receives: the selection's text, HTML and range, and `replaceText` |
 | `NamesLookupManager`, `LocationsLookupManager` | class | Own the name/location datasets: ranked search, id/name lookup, pagination, verse lookup |
 | `parseMentionNameMatch(es)`, `parseMentionLocationMatch(es)`, `getLookupRecordValues`, `normalizeMentionNameType` | function | Dataset normalization helpers the managers use |
 | `getMentionKjvName` | function | The KJV English name to show beside a translated record's name, or `null` |
