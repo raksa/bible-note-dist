@@ -1,4 +1,4 @@
-import { A as e, Dn as t, En as n, I as r, It as i, Nr as a, Nt as o, Qr as s, Rr as c, Tr as l, V as ee, Wn as te, Xn as u, Yn as d, Zr as f, Zt as ne, ar as re, bn as p, c as m, gr as ie, ln as ae, mr as oe, n as h, oi as g, qn as se, qr as _, tt as v, ur as ce, wn as le, xn as y, xr as b, yn as x, zt as ue } from "./Lexical.prod-DYDuARMX.mjs";
+import { A as e, Dn as t, En as n, I as r, It as i, Nr as a, Nt as o, Qr as s, Rr as c, Tr as l, V as ee, Wn as te, Xn as u, Yn as d, Zr as f, Zt as ne, ar as re, bn as p, c as m, gr as ie, ln as ae, mr as oe, n as h, oi as g, qn as se, qr as _, tt as v, ur as ce, wn as le, xn as ue, xr as y, yn as b, zt as x } from "./Lexical.prod-DYDuARMX.mjs";
 import { F as S, M as C, s as w } from "./LexicalUtils.prod-D2Igim2c.mjs";
 import { I as de, K as fe, M as pe, _ as T, g as E, p as D, s as O, v as k } from "./ContentEditable-BaXBKC3m.mjs";
 import { t as A } from "./useLexicalEditable.prod-CgMasHPY.mjs";
@@ -69,7 +69,7 @@ function ye(n) {
 			}
 		}
 		return !0;
-	}, 0), n.registerCommand(ue, () => {
+	}, 0), n.registerCommand(x, () => {
 		let e = v();
 		return !!p(e) && (e.removeText(), !0);
 	}, 0), n.registerCommand(h, (e) => {
@@ -88,10 +88,10 @@ function ye(n) {
 		if (!p(t)) return !1;
 		let n = e, r = n.shiftKey;
 		return !!S(t, !1) && (n.preventDefault(), C(t, r, !1), !0);
-	}, 0), n.registerCommand(a, (e) => !!p(v()) && (!u || !b) && (e.preventDefault(), n.dispatchCommand(i, !0)), 0), n.registerCommand(le, (e) => !!p(v()) && (e.preventDefault(), n.dispatchCommand(i, !1)), 0), n.registerCommand(x, (e) => {
+	}, 0), n.registerCommand(a, (e) => !!p(v()) && (!u || !y) && (e.preventDefault(), n.dispatchCommand(i, !0)), 0), n.registerCommand(le, (e) => !!p(v()) && (e.preventDefault(), n.dispatchCommand(i, !1)), 0), n.registerCommand(b, (e) => {
 		if (!p(v())) return !1;
 		if (e !== null) {
-			if ((u || ae || y) && b) return !1;
+			if ((u || ae || ue) && y) return !1;
 			e.preventDefault();
 		}
 		return n.dispatchCommand(h, !1);
@@ -167,20 +167,20 @@ function Se({ editor: e, ErrorBoundary: t }) {
 function q(e) {
 	return e.read("latest", de(e.isComposing()));
 }
-function J({ contentEditable: e, placeholder: t = null, ErrorBoundary: n }) {
+function Ce({ contentEditable: e, placeholder: t = null, ErrorBoundary: n }) {
 	let [r] = g();
 	return function(e) {
 		K(() => d(ye(e), O(e)), [e]);
 	}(r), /*#__PURE__*/ me(B, { children: [
 		e,
-		/*#__PURE__*/ V(Ce, { content: t }),
+		/*#__PURE__*/ V(J, { content: t }),
 		/*#__PURE__*/ V(Se, {
 			editor: r,
 			ErrorBoundary: n
 		})
 	] });
 }
-function Ce({ content: e }) {
+function J({ content: e }) {
 	let [t] = g(), n = function(e) {
 		let [t, n] = z(() => q(e));
 		return K(() => {
@@ -310,7 +310,7 @@ var we = {
 		underlineStrikethrough: "PlaygroundEditorTheme__textUnderlineStrikethrough",
 		uppercase: "PlaygroundEditorTheme__textUppercase"
 	}
-}, Te = j.lazy(() => import("./StickyComponent-B1GQ5G8T.mjs"));
+}, Te = j.lazy(() => import("./StickyComponent-Ce5jkV0z.mjs"));
 function Ee(e) {
 	let t = e.getRootElement();
 	if (t === null) return document.body;
@@ -446,4 +446,4 @@ function Ae(e, t) {
 	return new $(e, t, "yellow", void 0, void 0, void 0, void 0, Oe());
 }
 //#endregion
-export { J as a, _e as c, we as i, ke as n, ge as o, $ as r, ve as s, Ae as t };
+export { Ce as a, ve as c, we as i, _e as l, ke as n, U as o, $ as r, ge as s, Ae as t };

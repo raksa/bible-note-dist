@@ -1,13 +1,13 @@
 import { En as e, Ht as t, ft as n, oi as r, pt as i } from "./Lexical.prod-DYDuARMX.mjs";
 import { N as a, a as o, n as s, o as c, r as l, t as u } from "./ContentEditable-BaXBKC3m.mjs";
-import { a as d, i as f, n as p, s as m } from "./StickyNode-C5dwEb8E.mjs";
+import { a as d, c as f, i as p, n as m } from "./StickyNode-CN3WkBD3.mjs";
 import { t as h } from "./useLexicalEditable.prod-CgMasHPY.mjs";
 import { t as g } from "./LexicalNestedComposer.prod-C96XUwM-.mjs";
 import { useCallback as _, useEffect as v, useLayoutEffect as y, useRef as b, useState as x } from "react";
 import { jsx as S, jsxs as C } from "react/jsx-runtime";
 //#region src/themes/StickyEditorTheme.ts
 var w = {
-	...f,
+	...p,
 	paragraph: "StickyEditorTheme__paragraph"
 }, T = 4;
 function E(e, t, n) {
@@ -55,8 +55,8 @@ function ee(e) {
 	let t = e.parentElement ?? document.body;
 	return Array.from(t.querySelectorAll(".sticky-note-container")).reduce((e, t) => Math.max(e, j(t)), 9) + 1;
 }
-function M({ x: s, y: f, nodeKey: E, color: O, caption: j, width: M, height: N, extraFontFamilies: P, layer: F = 0 }) {
-	let [I] = r(), L = h(), R = m(), z = P ?? R, [B, V] = x(null), H = b(null), U = b(null), W = b({
+function M({ x: s, y: p, nodeKey: E, color: O, caption: j, width: M, height: N, extraFontFamilies: P, layer: F = 0 }) {
+	let [I] = r(), L = h(), R = f(), z = P ?? R, [B, V] = x(null), H = b(null), U = b(null), W = b({
 		hasMoved: !1,
 		isDragging: !1,
 		pointerId: null,
@@ -86,7 +86,7 @@ function M({ x: s, y: f, nodeKey: E, color: O, caption: j, width: M, height: N, 
 		I.update(() => {
 			i(n), e(null);
 			let r = t(E);
-			p(r) && r.bringToFront();
+			m(r) && r.bringToFront();
 		});
 	}, [
 		I,
@@ -98,7 +98,7 @@ function M({ x: s, y: f, nodeKey: E, color: O, caption: j, width: M, height: N, 
 	}, [L, F]), v(() => j.registerUpdateListener(() => {
 		I.update(() => {
 			let e = t(E);
-			p(e) && e.markCaptionChanged();
+			m(e) && e.markCaptionChanged();
 		});
 	}), [
 		j,
@@ -106,10 +106,10 @@ function M({ x: s, y: f, nodeKey: E, color: O, caption: j, width: M, height: N, 
 		E
 	]), y(() => {
 		let e = W.current;
-		e.x = s, e.y = f;
+		e.x = s, e.y = p;
 		let t = H.current;
 		t !== null && D(t, e);
-	}, [s, f]), v(() => {
+	}, [s, p]), v(() => {
 		let e = G.current;
 		e.width = M, e.height = N;
 	}, [M, N]);
@@ -119,7 +119,7 @@ function M({ x: s, y: f, nodeKey: E, color: O, caption: j, width: M, height: N, 
 	}, [I]), J = (e, n) => {
 		I.update(() => {
 			let r = t(E);
-			p(r) && r.setSize(e, n);
+			m(r) && r.setSize(e, n);
 		});
 	}, Y = (e, t) => {
 		let n = H.current, r = U.current, i = W.current;
@@ -174,7 +174,7 @@ function M({ x: s, y: f, nodeKey: E, color: O, caption: j, width: M, height: N, 
 		let n = H.current, r = W.current;
 		r.pointerId === e.pointerId && (n !== null && (r.isDragging = !1, r.pointerId = null, r.hasMoved = !1, n.classList.remove("dragging"), I.update(() => {
 			let e = t(E);
-			p(e) && e.setPosition(r.x, r.y);
+			m(e) && e.setPosition(r.x, r.y);
 		})), e.preventDefault(), document.removeEventListener("pointermove", X), document.removeEventListener("pointerup", Z), document.removeEventListener("pointercancel", Z));
 	}, Q = (e) => {
 		let t = H.current, n = U.current, r = G.current, i = l(n);
@@ -201,12 +201,12 @@ function M({ x: s, y: f, nodeKey: E, color: O, caption: j, width: M, height: N, 
 	}, ne = () => {
 		I.update(() => {
 			let e = t(E);
-			p(e) && e.remove();
+			m(e) && e.remove();
 		});
 	}, re = () => {
 		I.update(() => {
 			let e = t(E);
-			p(e) && e.toggleColor();
+			m(e) && e.toggleColor();
 		});
 	}, { historyState: ie } = o();
 	return /* @__PURE__ */ S("div", {
