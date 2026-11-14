@@ -496,11 +496,7 @@ function Xe(e) {
 	for (let n = e; n !== null; n = n.getParent() ?? ve(n)) t++;
 	return t;
 }
-function Ze(e) {
-	let t = y(d(D(e, "previous")), "root");
-	return t && t[0].origin;
-}
-function Qe(e, t) {
+function Ze(e, t) {
 	let n = e;
 	for (; n != null;) {
 		if (n instanceof t) return n;
@@ -508,11 +504,11 @@ function Qe(e, t) {
 	}
 	return null;
 }
-function $e(e) {
+function Qe(e) {
 	let t = i(e, (e) => P(e) && !e.isInline());
 	return P(t) || K(4, e.__key), t;
 }
-function et(e, t, n, r) {
+function $e(e, t, n, r) {
 	let i = (e) => e instanceof t;
 	return e.registerNodeTransform(t, (e) => {
 		let t = ((e) => {
@@ -543,14 +539,14 @@ function et(e, t, n, r) {
 		}
 	});
 }
-function tt(e, t) {
+function et(e, t) {
 	let n = /* @__PURE__ */ new Map(), r = e._pendingEditorState;
 	for (let [e, r] of t._nodeMap) n.set(e, pe(r));
 	r && (r._nodeMap = n), ie();
 	let i = t._selection;
 	c(i === null ? null : i.clone());
 }
-function nt(e) {
+function tt(e) {
 	let t = M() || S(), n;
 	if (E(t)) n = f(t.focus, "next");
 	else {
@@ -563,14 +559,14 @@ function nt(e) {
 	let i = oe(e, n), a = O(i);
 	return ce(ge(T(a) ? _e(a) : i)), e.getLatest();
 }
-function rt(e, t) {
+function nt(e, t) {
 	let n = t();
 	return e.replace(n), n.append(e), n;
 }
 function Q(e, t) {
 	return e !== null && Object.getPrototypeOf(e).constructor.name === t.name;
 }
-function it(e) {
+function rt(e) {
 	let t = null;
 	if (Q(e, DragEvent) ? t = e.dataTransfer : Q(e, ClipboardEvent) && (t = e.clipboardData), t === null) return [
 		!1,
@@ -584,7 +580,7 @@ function it(e) {
 		i
 	];
 }
-function at(e) {
+function it(e) {
 	let t = M();
 	if (!E(t)) return !1;
 	let n = /* @__PURE__ */ new Set(), r = t.getNodes();
@@ -598,11 +594,11 @@ function at(e) {
 	}
 	return n.size > 0;
 }
-function ot(e, t) {
+function at(e, t) {
 	w(e, "next").insert(t);
 }
 var $ = !(ne || !ae) && void 0;
-function st(e, t = !1) {
+function ot(e, t = !1) {
 	let n = 1;
 	if (function() {
 		if ($ === void 0) {
@@ -618,27 +614,27 @@ function st(e, t = !1) {
 	}
 	return n;
 }
-function ct(e) {
+function st(e) {
 	return e._parentEditor !== null;
 }
-function lt(e, t) {
-	return ut(e, t, null);
+function ct(e, t) {
+	return lt(e, t, null);
 }
-function ut(e, t, n) {
+function lt(e, t, n) {
 	let r = !1;
-	for (let i of ft(e)) t(i) ? n !== null && n(i) : (r = !0, P(i) && ut(i, t, n || ((e) => i.insertAfter(e))), i.remove());
+	for (let i of dt(e)) t(i) ? n !== null && n(i) : (r = !0, P(i) && lt(i, t, n || ((e) => i.insertAfter(e))), i.remove());
 	return r;
 }
-function dt(e, t) {
+function ut(e, t) {
 	let n = [], r = Array.from(e).reverse();
 	for (let e = r.pop(); e !== void 0; e = r.pop()) if (t(e)) n.push(e);
-	else if (P(e)) for (let t of ft(e)) r.push(t);
+	else if (P(e)) for (let t of dt(e)) r.push(t);
 	return n;
 }
-function ft(e) {
-	return pt(w(e, "previous"));
+function dt(e) {
+	return ft(w(e, "previous"));
 }
-function pt(e) {
+function ft(e) {
 	return be({
 		hasNext: p,
 		initial: e.getAdjacentCaret(),
@@ -646,8 +642,19 @@ function pt(e) {
 		step: (e) => e.getAdjacentCaret()
 	});
 }
-function mt(e) {
+function pt(e) {
 	se(D(e, "next")).splice(1, e.getChildren());
+}
+function mt(e, t) {
+	let n = M();
+	if (E(n) && n.isCollapsed()) {
+		let a = i(n.anchor.getNode(), e);
+		if (a) {
+			let e = a.getParent();
+			if (e !== null && e.getFirstChild() === a && gt(n.anchor, a)) return a.insertBefore(r()).selectEnd(), t && t.preventDefault(), !0;
+		}
+	}
+	return !1;
 }
 function ht(e, t) {
 	let n = M();
@@ -655,27 +662,16 @@ function ht(e, t) {
 		let a = i(n.anchor.getNode(), e);
 		if (a) {
 			let e = a.getParent();
-			if (e !== null && e.getFirstChild() === a && _t(n.anchor, a)) return a.insertBefore(r()).selectEnd(), t && t.preventDefault(), !0;
+			if (e !== null && e.getLastChild() === a && _t(n.anchor, a)) return a.insertAfter(r()).selectEnd(), t && t.preventDefault(), !0;
 		}
 	}
 	return !1;
 }
 function gt(e, t) {
-	let n = M();
-	if (E(n) && n.isCollapsed()) {
-		let a = i(n.anchor.getNode(), e);
-		if (a) {
-			let e = a.getParent();
-			if (e !== null && e.getLastChild() === a && vt(n.anchor, a)) return a.insertAfter(r()).selectEnd(), t && t.preventDefault(), !0;
-		}
-	}
-	return !1;
-}
-function _t(e, t) {
 	return H(e, t, "previous");
 }
-function vt(e, t) {
+function _t(e, t) {
 	return H(e, t, "next");
 }
 //#endregion
-export { xe as A, Ue as C, we as D, Ee as E, je as F, Me as I, R as L, De as M, Pe as N, Te as O, G as P, He as S, lt as T, We as _, ot as a, X as b, et as c, st as d, dt as f, Ge as g, Y as h, it as i, Ie as j, Ce as k, ht as l, Qe as m, nt as n, $e as o, gt as p, tt as r, Q as s, at as t, rt as u, Ke as v, Ze as w, mt as x, ct as y };
+export { Ie as A, Ue as C, Te as D, we as E, Me as F, R as I, Pe as M, G as N, Ce as O, je as P, He as S, Ee as T, We as _, at as a, X as b, $e as c, ot as d, ut as f, Ge as g, Y as h, rt as i, De as j, xe as k, mt as l, Ze as m, tt as n, Qe as o, ht as p, et as r, Q as s, it as t, nt as u, Ke as v, ct as w, pt as x, st as y };

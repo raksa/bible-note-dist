@@ -1,10 +1,10 @@
 ---
 title: BibleNote editor user guide
 package: bible-note
-version: 0.6.0
+version: 0.6.2
 audience: people writing notes in the BibleNote editor
 chunking: one chunk per level-2 heading; the JSON in the HTML comment under each heading is that chunk's metadata
-chunks: 131
+chunks: 133
 ---
 
 # BibleNote editor user guide
@@ -13,7 +13,7 @@ How to use the BibleNote note editor: writing and formatting notes, mentioning p
 
 ## Getting started › Find your way around the editor
 
-<!-- chunk {"id":"ui/getting-started/find-your-way-around-the-editor","section":"Getting started","title":"Find your way around the editor","tags":["basics","layout","saving"],"source":"knowledge/ui/01-getting-started.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/getting-started/find-your-way-around-the-editor","section":"Getting started","title":"Find your way around the editor","tags":["basics","layout","saving"],"source":"knowledge/ui/01-getting-started.md","package":"bible-note@0.6.2"} -->
 
 The BibleNote editor has three parts, top to bottom.
 
@@ -41,7 +41,7 @@ Some footer controls depend on the app the editor runs in:
 
 ## Getting started › How your note is saved
 
-<!-- chunk {"id":"ui/getting-started/how-your-note-is-saved","section":"Getting started","title":"How your note is saved","tags":["basics","layout","saving"],"source":"knowledge/ui/01-getting-started.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/getting-started/how-your-note-is-saved","section":"Getting started","title":"How your note is saved","tags":["basics","layout","saving"],"source":"knowledge/ui/01-getting-started.md","package":"bible-note@0.6.2"} -->
 
 There is no Save button. The BibleNote editor saves the note automatically after every change, as you type. Where it is kept depends on the app: in a web browser it is stored in that browser on this device, while an app stores it with its own data. Close the editor and open it again and the note is still there.
 
@@ -60,7 +60,7 @@ Some actions replace or wipe the saved note: **Clear**, **Import**, **Import Wor
 
 ## Getting started › Lock the note with read-only mode
 
-<!-- chunk {"id":"ui/getting-started/lock-the-note-with-read-only-mode","section":"Getting started","title":"Lock the note with read-only mode","tags":["basics","layout","saving"],"source":"knowledge/ui/01-getting-started.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/getting-started/lock-the-note-with-read-only-mode","section":"Getting started","title":"Lock the note with read-only mode","tags":["basics","layout","saving"],"source":"knowledge/ui/01-getting-started.md","package":"bible-note@0.6.2"} -->
 
 Read-only mode protects the note from accidental edits while you read or present it.
 
@@ -87,7 +87,7 @@ Some apps open a note locked on purpose. The padlock tooltip then reads **Read-O
 
 ## Getting started › Undo and redo changes
 
-<!-- chunk {"id":"ui/getting-started/undo-and-redo-changes","section":"Getting started","title":"Undo and redo changes","tags":["basics","layout","saving"],"source":"knowledge/ui/01-getting-started.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/getting-started/undo-and-redo-changes","section":"Getting started","title":"Undo and redo changes","tags":["basics","layout","saving"],"source":"knowledge/ui/01-getting-started.md","package":"bible-note@0.6.2"} -->
 
 Use **Undo** and **Redo**, the two curved-arrow buttons at the left end of the toolbar, or the keyboard:
 
@@ -102,7 +102,7 @@ The undo history only lasts while the editor stays open. It also starts again af
 
 ## Getting started › Switch between light and dark appearance
 
-<!-- chunk {"id":"ui/getting-started/switch-between-light-and-dark-appearance","section":"Getting started","title":"Switch between light and dark appearance","tags":["basics","layout","saving"],"source":"knowledge/ui/01-getting-started.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/getting-started/switch-between-light-and-dark-appearance","section":"Getting started","title":"Switch between light and dark appearance","tags":["basics","layout","saving"],"source":"knowledge/ui/01-getting-started.md","package":"bible-note@0.6.2"} -->
 
 The BibleNote editor has a light and a dark appearance. Light is the default.
 
@@ -115,7 +115,7 @@ Printing always uses light colours on a white page, whichever appearance is on s
 
 ## Formatting text › The toolbar at the top of the editor
 
-<!-- chunk {"id":"ui/formatting-text/the-toolbar-at-the-top-of-the-editor","section":"Formatting text","title":"The toolbar at the top of the editor","tags":["formatting","toolbar","text","links","buttons","overview"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/the-toolbar-at-the-top-of-the-editor","section":"Formatting text","title":"The toolbar at the top of the editor","tags":["formatting","toolbar","text","links","buttons","overview"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 The toolbar runs across the top of the editor. From left to right it holds:
 
@@ -143,7 +143,7 @@ Hover over a button such as **Bold** to see its name and keyboard shortcut. Item
 
 ## Formatting text › Undo and redo changes
 
-<!-- chunk {"id":"ui/formatting-text/undo-and-redo-changes","section":"Formatting text","title":"Undo and redo changes","tags":["formatting","toolbar","text","links","undo","redo","history"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/undo-and-redo-changes","section":"Formatting text","title":"Undo and redo changes","tags":["formatting","toolbar","text","links","undo","redo","history"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 Use the **Undo** and **Redo** buttons at the left end of the toolbar (curved arrows), or the keyboard:
 
@@ -156,7 +156,7 @@ A button is greyed out when there is nothing to undo or redo, and both are greye
 
 ## Formatting text › Change a paragraph into a heading, list, quote or code block
 
-<!-- chunk {"id":"ui/formatting-text/change-a-paragraph-into-a-heading-list-quote-or-code-block","section":"Formatting text","title":"Change a paragraph into a heading, list, quote or code block","tags":["formatting","toolbar","text","links","headings","lists","quote","code block","block type"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/change-a-paragraph-into-a-heading-list-quote-or-code-block","section":"Formatting text","title":"Change a paragraph into a heading, list, quote or code block","tags":["formatting","toolbar","text","links","headings","lists","quote","code block","block type"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 The block type menu is the first menu on the toolbar, right after **Undo** and **Redo**. Its button shows what kind of block the cursor is in. The label is one of:
 
@@ -184,7 +184,7 @@ The `/` menu offers the same block types: type `/` and then, for example, `headi
 
 ## Formatting text › Change the font
 
-<!-- chunk {"id":"ui/formatting-text/change-the-font","section":"Formatting text","title":"Change the font","tags":["formatting","toolbar","text","links","font","font family","typeface","khmer"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/change-the-font","section":"Formatting text","title":"Change the font","tags":["formatting","toolbar","text","links","font","font family","typeface","khmer"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 Select the text, open the font menu on the toolbar (its button shows the current font, **Arial** by default) and choose a font. With no text selected, the font is used for what you type next. The built-in fonts are:
 
@@ -201,7 +201,7 @@ To go back to the default font, select the text and choose **Clear Formatting** 
 
 ## Formatting text › Change the text size
 
-<!-- chunk {"id":"ui/formatting-text/change-the-text-size","section":"Formatting text","title":"Change the text size","tags":["formatting","toolbar","text","links","font size","text size","bigger","smaller"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/change-the-text-size","section":"Formatting text","title":"Change the text size","tags":["formatting","toolbar","text","links","font size","text size","bigger","smaller"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 The font size box on the toolbar shows the size of the selected text in pixels. Normal text is 15.
 
@@ -213,7 +213,7 @@ Select text first to resize it; with nothing selected the new size is used for w
 
 ## Formatting text › Make text bold, italic or underlined
 
-<!-- chunk {"id":"ui/formatting-text/make-text-bold-italic-or-underlined","section":"Formatting text","title":"Make text bold, italic or underlined","tags":["formatting","toolbar","text","links","bold","italic","underline"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/make-text-bold-italic-or-underlined","section":"Formatting text","title":"Make text bold, italic or underlined","tags":["formatting","toolbar","text","links","bold","italic","underline"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 Select the text and click **Bold**, **Italic** or **Underline** on the toolbar, or press:
 
@@ -229,7 +229,7 @@ The same three buttons are on the small format bar that pops up over selected te
 
 ## Formatting text › Format text as inline code
 
-<!-- chunk {"id":"ui/formatting-text/format-text-as-inline-code","section":"Formatting text","title":"Format text as inline code","tags":["formatting","toolbar","text","links","inline code","monospace","code"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/format-text-as-inline-code","section":"Formatting text","title":"Format text as inline code","tags":["formatting","toolbar","text","links","inline code","monospace","code"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 The **</>** button on the toolbar marks the selected text as inline code: it is shown in a monospace font inside the paragraph. Its tooltip says **Insert code block**, but it styles the selected words rather than creating a separate block. Click it again to remove the code style.
 
@@ -240,7 +240,7 @@ For a whole separate block of code, choose **Code Block** from the block type me
 
 ## Formatting text › Change the text colour or background colour
 
-<!-- chunk {"id":"ui/formatting-text/change-the-text-colour-or-background-colour","section":"Formatting text","title":"Change the text colour or background colour","tags":["formatting","toolbar","text","links","colour","color","text color","background color","highlight color"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/change-the-text-colour-or-background-colour","section":"Formatting text","title":"Change the text colour or background colour","tags":["formatting","toolbar","text","links","colour","color","text color","background color","highlight color"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 Two toolbar buttons colour the selected text:
 
@@ -258,7 +258,7 @@ The colour is applied as soon as you pick it, and the toolbar button's icon take
 
 ## Formatting text › Strikethrough, subscript, superscript, highlight and letter case
 
-<!-- chunk {"id":"ui/formatting-text/strikethrough-subscript-superscript-highlight-and-letter-case","section":"Formatting text","title":"Strikethrough, subscript, superscript, highlight and letter case","tags":["formatting","toolbar","text","links","strikethrough","subscript","superscript","highlight","lowercase","uppercase","capitalize"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/strikethrough-subscript-superscript-highlight-and-letter-case","section":"Formatting text","title":"Strikethrough, subscript, superscript, highlight and letter case","tags":["formatting","toolbar","text","links","strikethrough","subscript","superscript","highlight","lowercase","uppercase","capitalize"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 The **⋯** button on the toolbar, after the colour buttons, opens more text styles. Select text first, then choose:
 
@@ -274,7 +274,7 @@ Choosing a style again turns it off. A style that is already on is highlighted i
 
 ## Formatting text › Clear formatting from text
 
-<!-- chunk {"id":"ui/formatting-text/clear-formatting-from-text","section":"Formatting text","title":"Clear formatting from text","tags":["formatting","toolbar","text","links","clear formatting","remove formatting","reset"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/clear-formatting-from-text","section":"Formatting text","title":"Clear formatting from text","tags":["formatting","toolbar","text","links","clear formatting","remove formatting","reset"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 Select the text and choose **Clear Formatting** from the **⋯** menu on the toolbar, or press `Ctrl+\` (`⌘+\` on macOS).
 
@@ -284,7 +284,7 @@ With nothing selected, **Clear Formatting** switches the styles off for the text
 
 ## Formatting text › Align text and change indentation
 
-<!-- chunk {"id":"ui/formatting-text/align-text-and-change-indentation","section":"Formatting text","title":"Align text and change indentation","tags":["formatting","toolbar","text","links","alignment","align","center","justify","indent","outdent"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/align-text-and-change-indentation","section":"Formatting text","title":"Align text and change indentation","tags":["formatting","toolbar","text","links","alignment","align","center","justify","indent","outdent"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 The last menu on the toolbar sets the alignment of the paragraph the cursor is in, or of every selected paragraph. Its button shows the current alignment. The alignments are:
 
@@ -304,7 +304,7 @@ The `/` menu also has **Align left**, **Align center**, **Align right** and **Al
 
 ## Formatting text › The format bar that appears over selected text
 
-<!-- chunk {"id":"ui/formatting-text/the-format-bar-that-appears-over-selected-text","section":"Formatting text","title":"The format bar that appears over selected text","tags":["formatting","toolbar","text","links","floating toolbar","selection","format bar"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/the-format-bar-that-appears-over-selected-text","section":"Formatting text","title":"The format bar that appears over selected text","tags":["formatting","toolbar","text","links","floating toolbar","selection","format bar"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 When you select text in the note, a small format bar pops up next to the selection. Its buttons, from left to right:
 
@@ -319,7 +319,7 @@ Some apps add their own buttons to the format bar, at its start or after **Inser
 
 ## Formatting text › Connect two passages with Link block text
 
-<!-- chunk {"id":"ui/formatting-text/connect-two-passages-with-link-block-text","section":"Formatting text","title":"Connect two passages with Link block text","tags":["formatting","toolbar","text","links","link block text","passage link","connect","arrow"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/connect-two-passages-with-link-block-text","section":"Formatting text","title":"Connect two passages with Link block text","tags":["formatting","toolbar","text","links","link block text","passage link","connect","arrow"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 **Link block text** draws a line between two passages in the note, for example to show that one verse answers another.
 
@@ -342,7 +342,7 @@ New links start as **No direction**. Press `Escape` or click elsewhere to close 
 
 ## Formatting text › Add a link to text
 
-<!-- chunk {"id":"ui/formatting-text/add-a-link-to-text","section":"Formatting text","title":"Add a link to text","tags":["formatting","toolbar","text","links","link","hyperlink","url","insert link","ctrl+k"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/add-a-link-to-text","section":"Formatting text","title":"Add a link to text","tags":["formatting","toolbar","text","links","link","hyperlink","url","insert link","ctrl+k"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 1. Select the words you want to link.
 2. Click **Insert link** on the toolbar (the chain icon) or press `Ctrl+K` (`⌘+K` on macOS).
@@ -360,7 +360,7 @@ Type the address in full, starting with `https://` or `http://`. Links to `http`
 
 ## Formatting text › Edit, open or remove a link
 
-<!-- chunk {"id":"ui/formatting-text/edit-open-or-remove-a-link","section":"Formatting text","title":"Edit, open or remove a link","tags":["formatting","toolbar","text","links","link","edit link","remove link","open link","unlink"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/edit-open-or-remove-a-link","section":"Formatting text","title":"Edit, open or remove a link","tags":["formatting","toolbar","text","links","link","edit link","remove link","open link","unlink"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 Click inside a link, or move the cursor into it, and a link box appears below it showing the address:
 
@@ -374,7 +374,7 @@ To open a link straight from the text while editing, hold `Ctrl` (`⌘` on macOS
 
 ## Formatting text › Web addresses and email addresses become links automatically
 
-<!-- chunk {"id":"ui/formatting-text/web-addresses-and-email-addresses-become-links-automatically","section":"Formatting text","title":"Web addresses and email addresses become links automatically","tags":["formatting","toolbar","text","links","autolink","automatic link","url","email"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/web-addresses-and-email-addresses-become-links-automatically","section":"Formatting text","title":"Web addresses and email addresses become links automatically","tags":["formatting","toolbar","text","links","autolink","automatic link","url","email"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 When you type or paste a web address that starts with `http://`, `https://` or `www.`, the editor turns it into a link by itself. An address starting with `www.` links to the `https://` version of it. An email address such as `name@example.com` becomes a `mailto:` link, which opens your email program.
 
@@ -384,7 +384,7 @@ When you paste just a web address, a small menu may also offer to embed it: **Em
 
 ## Formatting text › Show spaces and paragraph marks
 
-<!-- chunk {"id":"ui/formatting-text/show-spaces-and-paragraph-marks","section":"Formatting text","title":"Show spaces and paragraph marks","tags":["formatting","toolbar","text","links","invisible characters","whitespace","pilcrow","spaces"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/formatting-text/show-spaces-and-paragraph-marks","section":"Formatting text","title":"Show spaces and paragraph marks","tags":["formatting","toolbar","text","links","invisible characters","whitespace","pilcrow","spaces"],"source":"knowledge/ui/02-formatting-text.md","package":"bible-note@0.6.2"} -->
 
 The **¶** button on the toolbar (**Show invisible characters**) shows marks for characters you normally cannot see:
 
@@ -397,7 +397,7 @@ Click the button again to hide them. The marks are only drawn on screen; they ar
 
 ## The slash menu › Open the slash menu and insert a block
 
-<!-- chunk {"id":"ui/slash-menu/open-the-slash-menu-and-insert-a-block","section":"The slash menu","title":"Open the slash menu and insert a block","tags":["slash menu","slash command","component picker","insert","slash","/","quick insert","typeahead"],"source":"knowledge/ui/03-slash-menu.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/slash-menu/open-the-slash-menu-and-insert-a-block","section":"The slash menu","title":"Open the slash menu and insert a block","tags":["slash menu","slash command","component picker","insert","slash","/","quick insert","typeahead"],"source":"knowledge/ui/03-slash-menu.md","package":"bible-note@0.6.2"} -->
 
 Type `/` at the start of a line, after a space, or right after an opening bracket `(`. A menu opens at the cursor listing everything you can insert: headings, lists, tables, media, drawings, dates and more.
 
@@ -412,7 +412,7 @@ Typing `/` in the middle of a word, such as `and/or`, does not open the menu.
 
 ## The slash menu › Everything the slash menu offers
 
-<!-- chunk {"id":"ui/slash-menu/everything-the-slash-menu-offers","section":"The slash menu","title":"Everything the slash menu offers","tags":["slash menu","slash command","component picker","insert","slash menu items","list of blocks"],"source":"knowledge/ui/03-slash-menu.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/slash-menu/everything-the-slash-menu-offers","section":"The slash menu","title":"Everything the slash menu offers","tags":["slash menu","slash command","component picker","insert","slash menu items","list of blocks"],"source":"knowledge/ui/03-slash-menu.md","package":"bible-note@0.6.2"} -->
 
 The `/` menu lists these items, in this order. The right column shows extra words that also find the item when typed after `/`:
 
@@ -451,7 +451,7 @@ The `/` menu lists these items, in this order. The right column shows extra word
 
 ## The slash menu › How the slash menu matches what you type
 
-<!-- chunk {"id":"ui/slash-menu/how-the-slash-menu-matches-what-you-type","section":"The slash menu","title":"How the slash menu matches what you type","tags":["slash menu","slash command","component picker","insert","slash search","filter","keywords"],"source":"knowledge/ui/03-slash-menu.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/slash-menu/how-the-slash-menu-matches-what-you-type","section":"The slash menu","title":"How the slash menu matches what you type","tags":["slash menu","slash command","component picker","insert","slash search","filter","keywords"],"source":"knowledge/ui/03-slash-menu.md","package":"bible-note@0.6.2"} -->
 
 The text you type after `/` is compared with each item's name and with its extra search words. Capital letters do not matter, and the text can appear anywhere in the name or word, not only at the start. For example:
 
@@ -467,7 +467,7 @@ If nothing matches, the menu closes; delete some of the typed letters to bring i
 
 ## The slash menu › Insert a table of a chosen size from the slash menu
 
-<!-- chunk {"id":"ui/slash-menu/insert-a-table-of-a-chosen-size-from-the-slash-menu","section":"The slash menu","title":"Insert a table of a chosen size from the slash menu","tags":["slash menu","slash command","component picker","insert","table size","rows","columns","slash table"],"source":"knowledge/ui/03-slash-menu.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/slash-menu/insert-a-table-of-a-chosen-size-from-the-slash-menu","section":"The slash menu","title":"Insert a table of a chosen size from the slash menu","tags":["slash menu","slash command","component picker","insert","table size","rows","columns","slash table"],"source":"knowledge/ui/03-slash-menu.md","package":"bible-note@0.6.2"} -->
 
 Right after the `/`, type the number of rows, the letter `x` and the number of columns:
 
@@ -480,7 +480,7 @@ Choosing the plain **Table** item instead opens the **Insert Table** dialog, whe
 
 ## The slash menu › Add a block with the + button beside a paragraph
 
-<!-- chunk {"id":"ui/slash-menu/add-a-block-with-the-button-beside-a-paragraph","section":"The slash menu","title":"Add a block with the + button beside a paragraph","tags":["slash menu","slash command","component picker","insert","plus button","add block","block picker","drag handle"],"source":"knowledge/ui/03-slash-menu.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/slash-menu/add-a-block-with-the-button-beside-a-paragraph","section":"The slash menu","title":"Add a block with the + button beside a paragraph","tags":["slash menu","slash command","component picker","insert","plus button","add block","block picker","drag handle"],"source":"knowledge/ui/03-slash-menu.md","package":"bible-note@0.6.2"} -->
 
 With a mouse or trackpad, point at any paragraph or block in the note. A **+** button (tooltip **Click to add below**) and a drag handle appear in the margin to its left.
 
@@ -493,7 +493,7 @@ The **+** button and drag handle are not shown on touch-only devices such as pho
 
 ## Mentions of people and places › Mention a person with @
 
-<!-- chunk {"id":"ui/mentions/mention-a-person-with","section":"Mentions of people and places","title":"Mention a person with @","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/mentions/mention-a-person-with","section":"Mentions of people and places","title":"Mention a person with @","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.2"} -->
 
 A person mention links a name in your note to its record in the name dataset the app loads, so you can later hover it for a preview or open its full details.
 
@@ -512,7 +512,7 @@ You can also start a person mention from the toolbar: **Insert** › **Mention N
 
 ## Mentions of people and places › Mention a place with
 
-<!-- chunk {"id":"ui/mentions/mention-a-place-with","section":"Mentions of people and places","title":"Mention a place with","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/mentions/mention-a-place-with","section":"Mentions of people and places","title":"Mention a place with","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.2"} -->
 
 A place mention links a place name in your note to its record in the location dataset the app loads.
 
@@ -527,7 +527,7 @@ You can also use the toolbar: **Insert** › **Pin Location** types the `#` for 
 
 ## Mentions of people and places › How the mention suggestion list finds and orders matches
 
-<!-- chunk {"id":"ui/mentions/how-the-mention-suggestion-list-finds-and-orders-matches","section":"Mentions of people and places","title":"How the mention suggestion list finds and orders matches","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/mentions/how-the-mention-suggestion-list-finds-and-orders-matches","section":"Mentions of people and places","title":"How the mention suggestion list finds and orders matches","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.2"} -->
 
 The suggestion list that opens after `@` (people) or `#` (places) searches the dataset the app has loaded.
 
@@ -541,7 +541,7 @@ If nothing matches, no list appears and the letters stay as ordinary text. Try f
 
 ## Mentions of people and places › What the icons on person mentions mean
 
-<!-- chunk {"id":"ui/mentions/what-the-icons-on-person-mentions-mean","section":"Mentions of people and places","title":"What the icons on person mentions mean","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/mentions/what-the-icons-on-person-mentions-mean","section":"Mentions of people and places","title":"What the icons on person mentions mean","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.2"} -->
 
 Every name record has a kind, and the editor shows a matching icon in the `@` suggestion list, at the start of the mention in your note, in its hover card, its detail panel and the lookup panel:
 
@@ -559,7 +559,7 @@ A record with no kind, or a kind the editor does not know, uses the person icon.
 
 ## Mentions of people and places › What a mention looks like and how to change or delete it
 
-<!-- chunk {"id":"ui/mentions/what-a-mention-looks-like-and-how-to-change-or-delete-it","section":"Mentions of people and places","title":"What a mention looks like and how to change or delete it","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/mentions/what-a-mention-looks-like-and-how-to-change-or-delete-it","section":"Mentions of people and places","title":"What a mention looks like and how to change or delete it","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.2"} -->
 
 An inserted person or place mention shows the name on a tinted background with a small icon at its start. It stays on one line and the `@` or `#` you typed is not shown.
 
@@ -571,7 +571,7 @@ An inserted person or place mention shows the name on a tinted background with a
 
 ## Mentions of people and places › Preview a person or place by hovering over a mention
 
-<!-- chunk {"id":"ui/mentions/preview-a-person-or-place-by-hovering-over-a-mention","section":"Mentions of people and places","title":"Preview a person or place by hovering over a mention","tags":["mentions","names","locations","people","places","hover card","preview"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/mentions/preview-a-person-or-place-by-hovering-over-a-mention","section":"Mentions of people and places","title":"Preview a person or place by hovering over a mention","tags":["mentions","names","locations","people","places","hover card","preview"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.2"} -->
 
 Rest the mouse pointer on a person or place mention in your note for 2 seconds and a hover card opens below the mention (or above it when there is no room below).
 
@@ -591,7 +591,7 @@ The hover card needs a mouse. On a touch screen, tap the icon at the start of th
 
 ## Mentions of people and places › Open the detail panel for a person or place
 
-<!-- chunk {"id":"ui/mentions/open-the-detail-panel-for-a-person-or-place","section":"Mentions of people and places","title":"Open the detail panel for a person or place","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/mentions/open-the-detail-panel-for-a-person-or-place","section":"Mentions of people and places","title":"Open the detail panel for a person or place","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.2"} -->
 
 The detail panel is a floating window with everything the dataset knows about a person or place. Open it in any of these ways:
 
@@ -606,7 +606,7 @@ Several panels can be open at once, for example a person, their father and the p
 
 ## Mentions of people and places › What the person detail panel shows
 
-<!-- chunk {"id":"ui/mentions/what-the-person-detail-panel-shows","section":"Mentions of people and places","title":"What the person detail panel shows","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/mentions/what-the-person-detail-panel-shows","section":"Mentions of people and places","title":"What the person detail panel shows","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.2"} -->
 
 The person detail panel's header shows the kind icon and the name. Below it come the record's title line, its description and short facts (kind, gender, age).
 
@@ -626,7 +626,7 @@ The same **Details** section appears in the person's hover card.
 
 ## Mentions of people and places › What the place detail panel shows
 
-<!-- chunk {"id":"ui/mentions/what-the-place-detail-panel-shows","section":"Mentions of people and places","title":"What the place detail panel shows","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/mentions/what-the-place-detail-panel-shows","section":"Mentions of people and places","title":"What the place detail panel shows","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.2"} -->
 
 The place detail panel's header shows a pin icon and the place name. Below it come the place's title line, its description and its kind.
 
@@ -647,7 +647,7 @@ When the record has coordinates, a map from Google Maps appears at the end of **
 
 ## Mentions of people and places › Move, resize, copy and close a detail panel
 
-<!-- chunk {"id":"ui/mentions/move-resize-copy-and-close-a-detail-panel","section":"Mentions of people and places","title":"Move, resize, copy and close a detail panel","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/mentions/move-resize-copy-and-close-a-detail-panel","section":"Mentions of people and places","title":"Move, resize, copy and close a detail panel","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.2"} -->
 
 Person, place and Bible verse detail panels all work the same way.
 
@@ -659,7 +659,7 @@ Person, place and Bible verse detail panels all work the same way.
 
 ## Mentions of people and places › Follow links to other people, places and verses
 
-<!-- chunk {"id":"ui/mentions/follow-links-to-other-people-places-and-verses","section":"Mentions of people and places","title":"Follow links to other people, places and verses","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/mentions/follow-links-to-other-people-places-and-verses","section":"Mentions of people and places","title":"Follow links to other people, places and verses","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.2"} -->
 
 Hover cards and detail panels let you move from one record to the next without leaving your note.
 
@@ -671,7 +671,7 @@ Each link opens its own panel, so you can follow a family line or a journey acro
 
 ## Mentions of people and places › Names in other languages and the English KJV name
 
-<!-- chunk {"id":"ui/mentions/names-in-other-languages-and-the-english-kjv-name","section":"Mentions of people and places","title":"Names in other languages and the English KJV name","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/mentions/names-in-other-languages-and-the-english-kjv-name","section":"Mentions of people and places","title":"Names in other languages and the English KJV name","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.2"} -->
 
 Which people and places you can mention depends on the datasets the app hosting the editor loads. The editor has no list of its own. An app can load, for example, the English KJV dataset, a Khmer (BFBS) or a French (Louis Segond) one, and it can use a different dataset for names than for places. If the app loads none, `@` and `#` show no suggestions.
 
@@ -686,7 +686,7 @@ When a translated name is the same as the English one, no English name is added.
 
 ## Mentions of people and places › Why the person or place you want does not appear
 
-<!-- chunk {"id":"ui/mentions/why-the-person-or-place-you-want-does-not-appear","section":"Mentions of people and places","title":"Why the person or place you want does not appear","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/mentions/why-the-person-or-place-you-want-does-not-appear","section":"Mentions of people and places","title":"Why the person or place you want does not appear","tags":["mentions","names","locations","people","places"],"source":"knowledge/ui/04-mentions.md","package":"bible-note@0.6.2"} -->
 
 If typing `@` or `#` shows no suggestion for the person or place you expect, check the following:
 
@@ -700,7 +700,7 @@ To browse instead of guessing, open the lookup panel with the footer button **Sh
 
 ## Bible verse mentions › Insert a Bible verse mention with ^ and paste
 
-<!-- chunk {"id":"ui/bible-verses/insert-a-bible-verse-mention-with-and-paste","section":"Bible verse mentions","title":"Insert a Bible verse mention with ^ and paste","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/bible-verses/insert-a-bible-verse-mention-with-and-paste","section":"Bible verse mentions","title":"Insert a Bible verse mention with ^ and paste","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.2"} -->
 
 A Bible verse mention is a compact reference in your note, such as **Genesis 1:1**, that carries the full verse text. You read the text by hovering the mention or opening its panel.
 
@@ -716,7 +716,7 @@ If the app hosting the editor can send Bible text into your note, that text is h
 
 ## Bible verse mentions › Which pasted Bible text the editor recognises
 
-<!-- chunk {"id":"ui/bible-verses/which-pasted-bible-text-the-editor-recognises","section":"Bible verse mentions","title":"Which pasted Bible text the editor recognises","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/bible-verses/which-pasted-bible-text-the-editor-recognises","section":"Bible verse mentions","title":"Which pasted Bible text the editor recognises","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.2"} -->
 
 When you paste, the editor checks whether the clipboard holds Bible text in this shape:
 
@@ -741,7 +741,7 @@ If the app recognises the passage's language and has a font for it (for example 
 
 ## Bible verse mentions › Paste a Bible passage as a collapsible block
 
-<!-- chunk {"id":"ui/bible-verses/paste-a-bible-passage-as-a-collapsible-block","section":"Bible verse mentions","title":"Paste a Bible passage as a collapsible block","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/bible-verses/paste-a-bible-passage-as-a-collapsible-block","section":"Bible verse mentions","title":"Paste a Bible passage as a collapsible block","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.2"} -->
 
 Paste recognised Bible text (a first line such as `(KJV) Psalm 23:1-2` followed by the verse text) anywhere in your note without a `^` right before the cursor, and the editor turns it into a collapsible block:
 
@@ -755,7 +755,7 @@ To get a compact verse mention instead of a block, type `^` first and paste righ
 
 ## Bible verse mentions › Insert a Bible verse from the toolbar Insert menu
 
-<!-- chunk {"id":"ui/bible-verses/insert-a-bible-verse-from-the-toolbar-insert-menu","section":"Bible verse mentions","title":"Insert a Bible verse from the toolbar Insert menu","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/bible-verses/insert-a-bible-verse-from-the-toolbar-insert-menu","section":"Bible verse mentions","title":"Insert a Bible verse from the toolbar Insert menu","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.2"} -->
 
 The toolbar's **Insert** menu has three mention items:
 
@@ -769,7 +769,7 @@ The **Insert** menu is unavailable while the note is read-only.
 
 ## Bible verse mentions › What a Bible verse mention shows
 
-<!-- chunk {"id":"ui/bible-verses/what-a-bible-verse-mention-shows","section":"Bible verse mentions","title":"What a Bible verse mention shows","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/bible-verses/what-a-bible-verse-mention-shows","section":"Bible verse mentions","title":"What a Bible verse mention shows","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.2"} -->
 
 In your note a Bible verse mention shows the reference, such as **Genesis 1:1**, on a tinted background with a small book icon at its start. The version label from the pasted text, such as `(KJV)`, is not shown in the note.
 
@@ -784,7 +784,7 @@ To remove a verse mention, put the cursor right after it and press `Backspace`; 
 
 ## Bible verse mentions › Read a verse in the Bible verse panel
 
-<!-- chunk {"id":"ui/bible-verses/read-a-verse-in-the-bible-verse-panel","section":"Bible verse mentions","title":"Read a verse in the Bible verse panel","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/bible-verses/read-a-verse-in-the-bible-verse-panel","section":"Bible verse mentions","title":"Read a verse in the Bible verse panel","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.2"} -->
 
 The Bible verse panel is a floating window showing one verse mention's text. Open it by:
 
@@ -806,7 +806,7 @@ Several verse panels can be open at once; opening one that is already open bring
 
 ## Bible verse mentions › Switch a Bible verse to another version
 
-<!-- chunk {"id":"ui/bible-verses/switch-a-bible-verse-to-another-version","section":"Bible verse mentions","title":"Switch a Bible verse to another version","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/bible-verses/switch-a-bible-verse-to-another-version","section":"Bible verse mentions","title":"Switch a Bible verse to another version","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.2"} -->
 
 Some apps that host the editor let you read a verse mention in another Bible version.
 
@@ -820,7 +820,7 @@ When the app does not offer this, the version label is plain text and cannot be 
 
 ## Bible verse mentions › Open the verses listed for a person or place
 
-<!-- chunk {"id":"ui/bible-verses/open-the-verses-listed-for-a-person-or-place","section":"Bible verse mentions","title":"Open the verses listed for a person or place","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/bible-verses/open-the-verses-listed-for-a-person-or-place","section":"Bible verse mentions","title":"Open the verses listed for a person or place","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.2"} -->
 
 Person and place records list the verses where their name appears. To see them:
 
@@ -835,7 +835,7 @@ Verse links inside a record's description work the same way.
 
 ## Bible verse mentions › Does typing a reference like John 3:16 create a link?
 
-<!-- chunk {"id":"ui/bible-verses/does-typing-a-reference-like-john-316-create-a-link","section":"Bible verse mentions","title":"Does typing a reference like John 3:16 create a link?","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/bible-verses/does-typing-a-reference-like-john-316-create-a-link","section":"Bible verse mentions","title":"Does typing a reference like John 3:16 create a link?","tags":["bible","verses","mentions","paste"],"source":"knowledge/ui/05-bible-verses.md","package":"bible-note@0.6.2"} -->
 
 No. A reference you type into your note, such as `John 3:16`, stays ordinary text: it is not turned into a verse mention or a link and has no hover card. To get a reference you can hover and open, paste the verse text right after a `^`.
 
@@ -850,7 +850,7 @@ Not recognised: a chapter on its own (`Genesis 1`), a reference broken across tw
 
 ## Lookup panel › Open and close the lookup panel
 
-<!-- chunk {"id":"ui/lookup-panel/open-and-close-the-lookup-panel","section":"Lookup panel","title":"Open and close the lookup panel","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/lookup-panel/open-and-close-the-lookup-panel","section":"Lookup panel","title":"Open and close the lookup panel","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.2"} -->
 
 The lookup panel lets you search and browse every name and location the app has loaded, without inserting anything into your note.
 
@@ -863,7 +863,7 @@ The lookup panel is not shown in very narrow windows (600 pixels wide or less).
 
 ## Lookup panel › Search for a name or location in the lookup panel
 
-<!-- chunk {"id":"ui/lookup-panel/search-for-a-name-or-location-in-the-lookup-panel","section":"Lookup panel","title":"Search for a name or location in the lookup panel","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/lookup-panel/search-for-a-name-or-location-in-the-lookup-panel","section":"Lookup panel","title":"Search for a name or location in the lookup panel","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.2"} -->
 
 1. Open the lookup panel with the footer button **Show Lookup (name or location)**.
 2. Pick the **Names** tab for people (and other name records) or the **Locations** tab for places.
@@ -877,7 +877,7 @@ Click the X inside the search box (tooltip **Clear search**) to empty it. Each t
 
 ## Lookup panel › Filter lookup results by name type
 
-<!-- chunk {"id":"ui/lookup-panel/filter-lookup-results-by-name-type","section":"Lookup panel","title":"Filter lookup results by name type","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/lookup-panel/filter-lookup-results-by-name-type","section":"Lookup panel","title":"Filter lookup results by name type","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.2"} -->
 
 On the **Names** tab of the lookup panel, the dropdown with a funnel icon next to the tabs (tooltip **Filter by name type**) limits the list to one kind of name record.
 
@@ -890,7 +890,7 @@ The filter applies to names only. On the **Locations** tab the dropdown is greye
 
 ## Lookup panel › Page through lookup results
 
-<!-- chunk {"id":"ui/lookup-panel/page-through-lookup-results","section":"Lookup panel","title":"Page through lookup results","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/lookup-panel/page-through-lookup-results","section":"Lookup panel","title":"Page through lookup results","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.2"} -->
 
 The lookup panel shows 20 results per page. The list scrolls when the panel is too short to show them all.
 
@@ -903,7 +903,7 @@ Typing a new search or changing the name type filter always returns to page 1. T
 
 ## Lookup panel › What a lookup result shows
 
-<!-- chunk {"id":"ui/lookup-panel/what-a-lookup-result-shows","section":"Lookup panel","title":"What a lookup result shows","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/lookup-panel/what-a-lookup-result-shows","section":"Lookup panel","title":"What a lookup result shows","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.2"} -->
 
 Each row in the lookup panel's list shows:
 
@@ -918,7 +918,7 @@ The list uses the font the app sets for the dataset's language, if any, and the 
 
 ## Lookup panel › Open details for a lookup result
 
-<!-- chunk {"id":"ui/lookup-panel/open-details-for-a-lookup-result","section":"Lookup panel","title":"Open details for a lookup result","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/lookup-panel/open-details-for-a-lookup-result","section":"Lookup panel","title":"Open details for a lookup result","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.2"} -->
 
 Click a row in the lookup panel to open that person's or place's detail panel, the same floating window you get by clicking the icon of a mention in your note. It shows the title line, description and facts, and a **Details** section with family, locations, verses, links and, for places, a map when coordinates are known.
 
@@ -928,7 +928,7 @@ You can open several detail panels from the lookup panel, drag them by their hea
 
 ## Lookup panel › The lookup panel says "No matches"
 
-<!-- chunk {"id":"ui/lookup-panel/the-lookup-panel-says-no-matches","section":"Lookup panel","title":"The lookup panel says \"No matches\"","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/lookup-panel/the-lookup-panel-says-no-matches","section":"Lookup panel","title":"The lookup panel says \"No matches\"","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.2"} -->
 
 The lookup panel shows **No matches** when nothing in the current tab fits the search text and, on the **Names** tab, the selected name type.
 
@@ -941,7 +941,7 @@ The lookup panel only searches the datasets the app hosting the editor has loade
 
 ## Lookup panel › Can I move or resize the lookup panel?
 
-<!-- chunk {"id":"ui/lookup-panel/can-i-move-or-resize-the-lookup-panel","section":"Lookup panel","title":"Can I move or resize the lookup panel?","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/lookup-panel/can-i-move-or-resize-the-lookup-panel","section":"Lookup panel","title":"Can I move or resize the lookup panel?","tags":["lookup","search","names","locations"],"source":"knowledge/ui/06-lookup-panel.md","package":"bible-note@0.6.2"} -->
 
 No. The lookup panel always sits along the right side of the window and cannot be dragged or resized. Its list scrolls when there are more results than fit.
 
@@ -951,7 +951,7 @@ If the lookup panel covers part of your note, close it with the X at its top rig
 
 ## Inserting content › The Insert menu on the toolbar
 
-<!-- chunk {"id":"ui/inserting-content/the-insert-menu-on-the-toolbar","section":"Inserting content","title":"The Insert menu on the toolbar","tags":["insert","insert menu","blocks","content","toolbar","add content"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/the-insert-menu-on-the-toolbar","section":"Inserting content","title":"The Insert menu on the toolbar","tags":["insert","insert menu","blocks","content","toolbar","add content"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 The **Insert** button on the toolbar (plus icon) opens a menu of things to add at the cursor:
 
@@ -974,7 +974,7 @@ The **Insert** menu is greyed out in a read-only note, and it is not shown while
 
 ## Inserting content › Insert a horizontal rule or a page break
 
-<!-- chunk {"id":"ui/inserting-content/insert-a-horizontal-rule-or-a-page-break","section":"Inserting content","title":"Insert a horizontal rule or a page break","tags":["insert","insert menu","blocks","content","horizontal rule","divider","line","page break","print"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/insert-a-horizontal-rule-or-a-page-break","section":"Inserting content","title":"Insert a horizontal rule or a page break","tags":["insert","insert menu","blocks","content","horizontal rule","divider","line","page break","print"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 - **Horizontal Rule** (on the **Insert** menu), **Divider** in the `/` menu, or typing `---` and a space on an empty line adds a thin line across the note.
 - **Page Break** (on the **Insert** menu or in the `/` menu) adds a grey band labelled **PAGE BREAK**. When the note is printed, the content after it starts on a new page. The band itself is not printed.
@@ -983,7 +983,7 @@ Click a rule or a page break to select it; it is highlighted. Press `Backspace` 
 
 ## Inserting content › Insert an image, video, PDF or audio file
 
-<!-- chunk {"id":"ui/inserting-content/insert-an-image-video-pdf-or-audio-file","section":"Inserting content","title":"Insert an image, video, PDF or audio file","tags":["insert","insert menu","blocks","content","image","picture","photo","video","pdf","audio","media","upload"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/insert-an-image-video-pdf-or-audio-file","section":"Inserting content","title":"Insert an image, video, PDF or audio file","tags":["insert","insert menu","blocks","content","image","picture","photo","video","pdf","audio","media","upload"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 Choose **Media** from the **Insert** menu (tooltip **Insert image, video, pdf or audio**) or type `/media`. The **Insert Media** dialog asks where the file comes from:
 
@@ -1004,7 +1004,7 @@ The media is placed at the cursor. You can also drag an image file into the note
 
 ## Inserting content › Resize, caption, download or remove an image or other media
 
-<!-- chunk {"id":"ui/inserting-content/resize-caption-download-or-remove-an-image-or-other-media","section":"Inserting content","title":"Resize, caption, download or remove an image or other media","tags":["insert","insert menu","blocks","content","resize image","caption","download","media options"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/resize-caption-download-or-remove-an-image-or-other-media","section":"Inserting content","title":"Resize, caption, download or remove an image or other media","tags":["insert","insert menu","blocks","content","resize image","caption","download","media options"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 Click an image, video, PDF or audio player in the note to select it; it gets a blue outline. Then:
 
@@ -1019,7 +1019,7 @@ Press `Enter` on a selected item with a caption to jump into the caption, and `E
 
 ## Inserting content › Draw a diagram with Excalidraw
 
-<!-- chunk {"id":"ui/inserting-content/draw-a-diagram-with-excalidraw","section":"Inserting content","title":"Draw a diagram with Excalidraw","tags":["insert","insert menu","blocks","content","excalidraw","drawing","diagram","sketch"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/draw-a-diagram-with-excalidraw","section":"Inserting content","title":"Draw a diagram with Excalidraw","tags":["insert","insert menu","blocks","content","excalidraw","drawing","diagram","sketch"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 Choose **Excalidraw** from the **Insert** menu, or type `/excalidraw` (`/drawing` and `/diagram` work too). A drawing editor opens over the note with the Excalidraw drawing tools.
 
@@ -1035,7 +1035,7 @@ While the drawing editor is open, `Ctrl` and the mouse wheel (or a pinch) zoom t
 
 ## Inserting content › Edit or resize an Excalidraw drawing
 
-<!-- chunk {"id":"ui/inserting-content/edit-or-resize-an-excalidraw-drawing","section":"Inserting content","title":"Edit or resize an Excalidraw drawing","tags":["insert","insert menu","blocks","content","edit drawing","excalidraw","resize drawing"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/edit-or-resize-an-excalidraw-drawing","section":"Inserting content","title":"Edit or resize an Excalidraw drawing","tags":["insert","insert menu","blocks","content","edit drawing","excalidraw","resize drawing"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 Click a drawing in the note to select it. A pencil button and resize handles appear on it.
 
@@ -1047,7 +1047,7 @@ Drawings cannot be edited in a read-only note.
 
 ## Inserting content › Insert a table
 
-<!-- chunk {"id":"ui/inserting-content/insert-a-table","section":"Inserting content","title":"Insert a table","tags":["insert","insert menu","blocks","content","table","grid","rows","columns","insert table"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/insert-a-table","section":"Inserting content","title":"Insert a table","tags":["insert","insert menu","blocks","content","table","grid","rows","columns","insert table"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 Choose **Table** from the **Insert** menu, or type `/table`. In the **Insert Table** dialog:
 
@@ -1063,7 +1063,7 @@ Quicker ways:
 
 ## Inserting content › Move around and resize a table
 
-<!-- chunk {"id":"ui/inserting-content/move-around-and-resize-a-table","section":"Inserting content","title":"Move around and resize a table","tags":["insert","insert menu","blocks","content","table navigation","tab","resize column","column width","row height"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/move-around-and-resize-a-table","section":"Inserting content","title":"Move around and resize a table","tags":["insert","insert menu","blocks","content","table navigation","tab","resize column","column width","row height"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 - Click a cell to type in it.
 - `Tab` moves to the next cell and `Shift+Tab` to the previous one, row by row. `Tab` in the last cell moves the cursor out of the table, to the line after it.
@@ -1077,7 +1077,7 @@ A table wider than the note can be scrolled sideways.
 
 ## Inserting content › Change a table with the cell menu
 
-<!-- chunk {"id":"ui/inserting-content/change-a-table-with-the-cell-menu","section":"Inserting content","title":"Change a table with the cell menu","tags":["insert","insert menu","blocks","content","table menu","merge cells","delete row","insert column","cell background","header row"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/change-a-table-with-the-cell-menu","section":"Inserting content","title":"Change a table with the cell menu","tags":["insert","insert menu","blocks","content","table menu","merge cells","delete row","insert column","cell background","header row"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 Put the cursor in a table cell. A small down-arrow button appears in the top-right corner of that cell; click it to open the cell menu:
 
@@ -1094,7 +1094,7 @@ The cell menu button is not shown in a read-only note.
 
 ## Inserting content › Add rows, add columns or sort a table with the hover buttons
 
-<!-- chunk {"id":"ui/inserting-content/add-rows-add-columns-or-sort-a-table-with-the-hover-buttons","section":"Inserting content","title":"Add rows, add columns or sort a table with the hover buttons","tags":["insert","insert menu","blocks","content","table add row","add column","sort table","hover"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/add-rows-add-columns-or-sort-a-table-with-the-hover-buttons","section":"Inserting content","title":"Add rows, add columns or sort a table with the hover buttons","tags":["insert","insert menu","blocks","content","table add row","add column","sort table","hover"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 With a mouse or trackpad, point at a table:
 
@@ -1107,7 +1107,7 @@ These hover buttons are not shown in a read-only note. They are not shown on tou
 
 ## Inserting content › Insert a poll
 
-<!-- chunk {"id":"ui/inserting-content/insert-a-poll","section":"Inserting content","title":"Insert a poll","tags":["insert","insert menu","blocks","content","poll","vote","survey"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/insert-a-poll","section":"Inserting content","title":"Insert a poll","tags":["insert","insert menu","blocks","content","poll","vote","survey"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 Choose **Poll** from the **Insert** menu, or type `/poll`. In the **Insert Poll** dialog type the **Question** and click **Confirm**.
 
@@ -1122,7 +1122,7 @@ Votes are counted in this note only; each click of **+** adds one vote.
 
 ## Inserting content › Insert a columns layout
 
-<!-- chunk {"id":"ui/inserting-content/insert-a-columns-layout","section":"Inserting content","title":"Insert a columns layout","tags":["insert","insert menu","blocks","content","columns","layout","side by side","grid"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/insert-a-columns-layout","section":"Inserting content","title":"Insert a columns layout","tags":["insert","insert menu","blocks","content","columns","layout","side by side","grid"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 Choose **Columns Layout** from the **Insert** menu, or type `/columns`. In the **Insert Columns Layout** dialog, pick a layout from the list and click **Insert**:
 
@@ -1138,7 +1138,7 @@ When the layout is the last block in the note, put the cursor on an empty line a
 
 ## Inserting content › Insert a math equation
 
-<!-- chunk {"id":"ui/inserting-content/insert-a-math-equation","section":"Inserting content","title":"Insert a math equation","tags":["insert","insert menu","blocks","content","equation","math","latex","katex","formula"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/insert-a-math-equation","section":"Inserting content","title":"Insert a math equation","tags":["insert","insert menu","blocks","content","equation","math","latex","katex","formula"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 Choose **Equation** from the **Insert** menu, or type `/equation` (or `/math`, `/latex`). The **Insert Equation** dialog has:
 
@@ -1152,7 +1152,7 @@ You can also type an inline equation between dollar signs: `$x^2$` turns into an
 
 ## Inserting content › Edit an equation
 
-<!-- chunk {"id":"ui/inserting-content/edit-an-equation","section":"Inserting content","title":"Edit an equation","tags":["insert","insert menu","blocks","content","edit equation","math","latex"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/edit-an-equation","section":"Inserting content","title":"Edit an equation","tags":["insert","insert menu","blocks","content","edit equation","math","latex"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 Double-click an equation in the note. Its LaTeX source appears in an edit box, between `$` signs for an inline equation or `$$` signs for one on its own line. Change the formula, then press `Escape` or click elsewhere in the note; the equation is redrawn with your changes.
 
@@ -1160,7 +1160,7 @@ Equations cannot be edited in a read-only note.
 
 ## Inserting content › Insert a collapsible section
 
-<!-- chunk {"id":"ui/inserting-content/insert-a-collapsible-section","section":"Inserting content","title":"Insert a collapsible section","tags":["insert","insert menu","blocks","content","collapsible","toggle","fold","expand","collapse","details"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/insert-a-collapsible-section","section":"Inserting content","title":"Insert a collapsible section","tags":["insert","insert menu","blocks","content","collapsible","toggle","fold","expand","collapse","details"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 Choose **Collapsible container** from the **Insert** menu, or type `/collapsible` (or `/toggle`). An open section is added with a bold title line and a content area under it, and the cursor goes into the title.
 
@@ -1171,7 +1171,7 @@ Choose **Collapsible container** from the **Insert** menu, or type `/collapsible
 
 ## Inserting content › Insert a date
 
-<!-- chunk {"id":"ui/inserting-content/insert-a-date","section":"Inserting content","title":"Insert a date","tags":["insert","insert menu","blocks","content","date","calendar","time","today"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/insert-a-date","section":"Inserting content","title":"Insert a date","tags":["insert","insert menu","blocks","content","date","calendar","time","today"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 Choose **Date** from the **Insert** menu, or type `/today`, `/tomorrow`, `/yesterday` or `/date`. The date appears in the text as a small chip, such as **Sat Nov 07 2026**.
 
@@ -1184,7 +1184,7 @@ Click outside the calendar or press `Escape` to close it.
 
 ## Inserting content › Embed a YouTube video or a web page
 
-<!-- chunk {"id":"ui/inserting-content/embed-a-youtube-video-or-a-web-page","section":"Inserting content","title":"Embed a YouTube video or a web page","tags":["insert","insert menu","blocks","content","youtube","video","embed","website","iframe","web page"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/embed-a-youtube-video-or-a-web-page","section":"Inserting content","title":"Embed a YouTube video or a web page","tags":["insert","insert menu","blocks","content","youtube","video","embed","website","iframe","web page"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 - **YouTube** — choose **Youtube Video** from the **Insert** menu (or type `/youtube`). Paste the video's link into the **Embed Youtube Video** dialog, for example `https://www.youtube.com/watch?v=…`, and click **Embed**. The video player is added to the note.
 - **Web page** — choose **Embed Website** from the **Insert** menu (or type `/website`). Paste any `http://` or `https://` address into the **Embed Website** dialog and click **Embed**. The page is shown in a frame in the note. YouTube links are embedded as videos instead.
@@ -1195,7 +1195,7 @@ An embedded web page can be resized: click it to select it, then drag the handle
 
 ## Inserting content › Embed a link you paste
 
-<!-- chunk {"id":"ui/inserting-content/embed-a-link-you-paste","section":"Inserting content","title":"Embed a link you paste","tags":["insert","insert menu","blocks","content","paste link","auto embed","youtube","website"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/embed-a-link-you-paste","section":"Inserting content","title":"Embed a link you paste","tags":["insert","insert menu","blocks","content","paste link","auto embed","youtube","website"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 When you paste just a web address into the note, it becomes a link and a small menu opens next to it:
 
@@ -1206,7 +1206,7 @@ Choose with the mouse, or with `↓`/`↑` and `Enter`. `Escape` closes the menu
 
 ## Inserting content › Insert a code block and choose its language
 
-<!-- chunk {"id":"ui/inserting-content/insert-a-code-block-and-choose-its-language","section":"Inserting content","title":"Insert a code block and choose its language","tags":["insert","insert menu","blocks","content","code block","programming","syntax highlighting","language"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/insert-a-code-block-and-choose-its-language","section":"Inserting content","title":"Insert a code block and choose its language","tags":["insert","insert menu","blocks","content","code block","programming","syntax highlighting","language"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 To start a code block:
 
@@ -1220,7 +1220,7 @@ When the **Use Shiki for Code Highlighting** switch is on in the settings panel 
 
 ## Inserting content › Copy or tidy the code in a code block
 
-<!-- chunk {"id":"ui/inserting-content/copy-or-tidy-the-code-in-a-code-block","section":"Inserting content","title":"Copy or tidy the code in a code block","tags":["insert","insert menu","blocks","content","copy code","format code","prettier"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/copy-or-tidy-the-code-in-a-code-block","section":"Inserting content","title":"Copy or tidy the code in a code block","tags":["insert","insert menu","blocks","content","copy code","format code","prettier"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 With a mouse or trackpad, point at a code block. A small bar appears on the block with the language name and two icon buttons:
 
@@ -1231,7 +1231,7 @@ These buttons are not shown on touch-only devices.
 
 ## Inserting content › Insert an emoji or a special character
 
-<!-- chunk {"id":"ui/inserting-content/insert-an-emoji-or-a-special-character","section":"Inserting content","title":"Insert an emoji or a special character","tags":["insert","insert menu","blocks","content","emoji","symbol","special character","html entity"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/insert-an-emoji-or-a-special-character","section":"Inserting content","title":"Insert an emoji or a special character","tags":["insert","insert menu","blocks","content","emoji","symbol","special character","html entity"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 Choose **Emoji & HTML Character** from the **Insert** menu. The **Insert Emoji or HTML Character** dialog has two tabs:
 
@@ -1242,7 +1242,7 @@ Type in the search box to filter, then click a result to insert it at the cursor
 
 ## Inserting content › Insert the Default Example note
 
-<!-- chunk {"id":"ui/inserting-content/insert-the-default-example-note","section":"Inserting content","title":"Insert the Default Example note","tags":["insert","insert menu","blocks","content","default example","sample","demo","template"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/insert-the-default-example-note","section":"Inserting content","title":"Insert the Default Example note","tags":["insert","insert menu","blocks","content","default example","sample","demo","template"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 **Default Example** on the **Insert** menu adds a ready-made sample study of Genesis 1 at the cursor. It shows off many kinds of content at once: a quoted Bible passage, a collapsible section, bullet, numbered and check lists, a table, a code block and a two-column layout.
 
@@ -1250,7 +1250,7 @@ Use it to see what the editor can do, or as a starting point. Delete the parts y
 
 ## Inserting content › Move a block by dragging it
 
-<!-- chunk {"id":"ui/inserting-content/move-a-block-by-dragging-it","section":"Inserting content","title":"Move a block by dragging it","tags":["insert","insert menu","blocks","content","drag handle","move block","reorder","drag and drop"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/inserting-content/move-a-block-by-dragging-it","section":"Inserting content","title":"Move a block by dragging it","tags":["insert","insert menu","blocks","content","drag handle","move block","reorder","drag and drop"],"source":"knowledge/ui/07-inserting-content.md","package":"bible-note@0.6.2"} -->
 
 With a mouse or trackpad, point at any paragraph, heading, list, table, image or other block. A drag handle (six dots) appears in the margin to its left, next to a **+** button.
 
@@ -1261,7 +1261,7 @@ The drag handle and **+** button need a pointer that can hover, so they are not 
 
 ## Sticky notes › Add a sticky note
 
-<!-- chunk {"id":"ui/sticky-notes/add-a-sticky-note","section":"Sticky notes","title":"Add a sticky note","tags":["sticky notes","annotations"],"source":"knowledge/ui/08-sticky-notes.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/sticky-notes/add-a-sticky-note","section":"Sticky notes","title":"Add a sticky note","tags":["sticky notes","annotations"],"source":"knowledge/ui/08-sticky-notes.md","package":"bible-note@0.6.2"} -->
 
 A sticky note is a small coloured note that floats on top of the writing area, separate from the note's text.
 
@@ -1276,7 +1276,7 @@ Sticky notes are part of the note. They are saved with it automatically, include
 
 ## Sticky notes › Write in a sticky note
 
-<!-- chunk {"id":"ui/sticky-notes/write-in-a-sticky-note","section":"Sticky notes","title":"Write in a sticky note","tags":["sticky notes","annotations"],"source":"knowledge/ui/08-sticky-notes.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/sticky-notes/write-in-a-sticky-note","section":"Sticky notes","title":"Write in a sticky note","tags":["sticky notes","annotations"],"source":"knowledge/ui/08-sticky-notes.md","package":"bible-note@0.6.2"} -->
 
 Click inside a sticky note and type. Sticky-note text is plain text: the toolbar formatting buttons do not apply to it.
 
@@ -1292,7 +1292,7 @@ Things to know:
 
 ## Sticky notes › Move and resize a sticky note
 
-<!-- chunk {"id":"ui/sticky-notes/move-and-resize-a-sticky-note","section":"Sticky notes","title":"Move and resize a sticky note","tags":["sticky notes","annotations"],"source":"knowledge/ui/08-sticky-notes.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/sticky-notes/move-and-resize-a-sticky-note","section":"Sticky notes","title":"Move and resize a sticky note","tags":["sticky notes","annotations"],"source":"knowledge/ui/08-sticky-notes.md","package":"bible-note@0.6.2"} -->
 
 ### Move a sticky note
 
@@ -1317,7 +1317,7 @@ Clicking a sticky note brings it in front of any other sticky notes it overlaps.
 
 ## Sticky notes › Change a sticky note's colour
 
-<!-- chunk {"id":"ui/sticky-notes/change-a-sticky-notes-colour","section":"Sticky notes","title":"Change a sticky note's colour","tags":["sticky notes","annotations"],"source":"knowledge/ui/08-sticky-notes.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/sticky-notes/change-a-sticky-notes-colour","section":"Sticky notes","title":"Change a sticky note's colour","tags":["sticky notes","annotations"],"source":"knowledge/ui/08-sticky-notes.md","package":"bible-note@0.6.2"} -->
 
 Each sticky note has two small, faint buttons in its top-right corner. They become clearer when you point at them.
 
@@ -1335,7 +1335,7 @@ After sage, the next click goes back to yellow. In dark mode each colour is show
 
 ## Sticky notes › Delete a sticky note
 
-<!-- chunk {"id":"ui/sticky-notes/delete-a-sticky-note","section":"Sticky notes","title":"Delete a sticky note","tags":["sticky notes","annotations"],"source":"knowledge/ui/08-sticky-notes.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/sticky-notes/delete-a-sticky-note","section":"Sticky notes","title":"Delete a sticky note","tags":["sticky notes","annotations"],"source":"knowledge/ui/08-sticky-notes.md","package":"bible-note@0.6.2"} -->
 
 Click the red × button (**Delete**) in the top-right corner of the sticky note. It is removed at once, with no confirmation. If you deleted the wrong one, use **Undo** (`Ctrl+Z`, or `⌘+Z` on macOS) to bring it back.
 
@@ -1345,7 +1345,7 @@ Deleting text in the note never removes sticky notes. Even if you select all the
 
 ## Sticky notes › Hide or show all sticky notes
 
-<!-- chunk {"id":"ui/sticky-notes/hide-or-show-all-sticky-notes","section":"Sticky notes","title":"Hide or show all sticky notes","tags":["sticky notes","annotations"],"source":"knowledge/ui/08-sticky-notes.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/sticky-notes/hide-or-show-all-sticky-notes","section":"Sticky notes","title":"Hide or show all sticky notes","tags":["sticky notes","annotations"],"source":"knowledge/ui/08-sticky-notes.md","package":"bible-note@0.6.2"} -->
 
 Use the sticky-notes button in the footer bar. Its tooltip reads **Hide Sticky Notes** while they are visible and **Show Sticky Notes** while they are hidden.
 
@@ -1358,7 +1358,7 @@ The editor does not remember this choice. Sticky notes are shown again the next 
 
 ## Typing shortcuts › Start a heading, quote or list by typing markdown
 
-<!-- chunk {"id":"ui/typing-shortcuts/start-a-heading-quote-or-list-by-typing-markdown","section":"Typing shortcuts","title":"Start a heading, quote or list by typing markdown","tags":["markdown","typing","shortcuts","emoji","autocomplete","heading","quote","bullet list","numbered list","check list"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/typing-shortcuts/start-a-heading-quote-or-list-by-typing-markdown","section":"Typing shortcuts","title":"Start a heading, quote or list by typing markdown","tags":["markdown","typing","shortcuts","emoji","autocomplete","heading","quote","bullet list","numbered list","check list"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 At the very start of a line, type one of these markers followed by a space. The marker disappears and the line changes into that kind of block:
 
@@ -1380,7 +1380,7 @@ At the very start of a line, type one of these markers followed by a space. The 
 
 ## Typing shortcuts › Start a code block by typing three backticks
 
-<!-- chunk {"id":"ui/typing-shortcuts/start-a-code-block-by-typing-three-backticks","section":"Typing shortcuts","title":"Start a code block by typing three backticks","tags":["markdown","typing","shortcuts","emoji","autocomplete","code block","backticks","fence"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/typing-shortcuts/start-a-code-block-by-typing-three-backticks","section":"Typing shortcuts","title":"Start a code block by typing three backticks","tags":["markdown","typing","shortcuts","emoji","autocomplete","code block","backticks","fence"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 At the start of a line, type three backticks — ` ``` ` — and press `Space` or `Enter`. The line becomes an empty code block.
 
@@ -1390,7 +1390,7 @@ Markdown shortcuts are switched off inside code blocks, so you can type `#`, `*`
 
 ## Typing shortcuts › Format text as you type with markdown
 
-<!-- chunk {"id":"ui/typing-shortcuts/format-text-as-you-type-with-markdown","section":"Typing shortcuts","title":"Format text as you type with markdown","tags":["markdown","typing","shortcuts","emoji","autocomplete","bold","italic","strikethrough","highlight","inline code"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/typing-shortcuts/format-text-as-you-type-with-markdown","section":"Typing shortcuts","title":"Format text as you type with markdown","tags":["markdown","typing","shortcuts","emoji","autocomplete","bold","italic","strikethrough","highlight","inline code"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 Type the markers around the words. The formatting is applied, and the markers removed, as soon as you type the closing marker:
 
@@ -1409,7 +1409,7 @@ Type the markers around the words. The formatting is applied, and the markers re
 
 ## Typing shortcuts › Type a link, image, line, equation or emoji in markdown
 
-<!-- chunk {"id":"ui/typing-shortcuts/type-a-link-image-line-equation-or-emoji-in-markdown","section":"Typing shortcuts","title":"Type a link, image, line, equation or emoji in markdown","tags":["markdown","typing","shortcuts","emoji","autocomplete","link","image","horizontal rule","equation"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/typing-shortcuts/type-a-link-image-line-equation-or-emoji-in-markdown","section":"Typing shortcuts","title":"Type a link, image, line, equation or emoji in markdown","tags":["markdown","typing","shortcuts","emoji","autocomplete","link","image","horizontal rule","equation"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 | Type                                                  | You get                                                     |
 | ----------------------------------------------------- | ----------------------------------------------------------- |
@@ -1425,7 +1425,7 @@ To edit an equation afterwards, double-click it.
 
 ## Typing shortcuts › Type a table row with pipes
 
-<!-- chunk {"id":"ui/typing-shortcuts/type-a-table-row-with-pipes","section":"Typing shortcuts","title":"Type a table row with pipes","tags":["markdown","typing","shortcuts","emoji","autocomplete","table","pipes"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/typing-shortcuts/type-a-table-row-with-pipes","section":"Typing shortcuts","title":"Type a table row with pipes","tags":["markdown","typing","shortcuts","emoji","autocomplete","table","pipes"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 You can build a simple table by typing rows of cells between pipe characters:
 
@@ -1439,7 +1439,7 @@ For a larger table, use **Table** on the **Insert** menu or type `/3x4` instead.
 
 ## Typing shortcuts › Pick an emoji by typing a colon
 
-<!-- chunk {"id":"ui/typing-shortcuts/pick-an-emoji-by-typing-a-colon","section":"Typing shortcuts","title":"Pick an emoji by typing a colon","tags":["markdown","typing","shortcuts","emoji","autocomplete","emoji picker","colon"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/typing-shortcuts/pick-an-emoji-by-typing-a-colon","section":"Typing shortcuts","title":"Pick an emoji by typing a colon","tags":["markdown","typing","shortcuts","emoji","autocomplete","emoji picker","colon"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 At the start of a line or after a space, type `:` followed by part of an emoji's name, such as `:pray` or `:hea`. A list of up to ten matching emoji opens, each with its name.
 
@@ -1454,7 +1454,7 @@ For a searchable list of every emoji and special character, use **Emoji & HTML C
 
 ## Typing shortcuts › Smileys that turn into emoji automatically
 
-<!-- chunk {"id":"ui/typing-shortcuts/smileys-that-turn-into-emoji-automatically","section":"Typing shortcuts","title":"Smileys that turn into emoji automatically","tags":["markdown","typing","shortcuts","emoji","autocomplete","emoticon","smiley","auto replace"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/typing-shortcuts/smileys-that-turn-into-emoji-automatically","section":"Typing shortcuts","title":"Smileys that turn into emoji automatically","tags":["markdown","typing","shortcuts","emoji","autocomplete","emoticon","smiley","auto replace"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 These text smileys are replaced by emoji as soon as you finish typing them:
 
@@ -1469,7 +1469,7 @@ The replacement happens anywhere in the text, even in the middle of a word. Only
 
 ## Typing shortcuts › Accept word suggestions while typing
 
-<!-- chunk {"id":"ui/typing-shortcuts/accept-word-suggestions-while-typing","section":"Typing shortcuts","title":"Accept word suggestions while typing","tags":["markdown","typing","shortcuts","emoji","autocomplete","word suggestion","predictive text"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/typing-shortcuts/accept-word-suggestions-while-typing","section":"Typing shortcuts","title":"Accept word suggestions while typing","tags":["markdown","typing","shortcuts","emoji","autocomplete","word suggestion","predictive text"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 When you are typing at the end of a paragraph and the word you are typing has at least four letters, the editor may suggest how it ends. After a moment, the rest of a matching English word appears in grey after the cursor, followed by **(TAB)**.
 
@@ -1483,7 +1483,7 @@ Suggestions are on by default. In apps that show the settings panel, the **Autoc
 
 ## Typing shortcuts › Indent with the Tab key
 
-<!-- chunk {"id":"ui/typing-shortcuts/indent-with-the-tab-key","section":"Typing shortcuts","title":"Indent with the Tab key","tags":["markdown","typing","shortcuts","emoji","autocomplete","tab","indent","outdent","shift+tab","nested list"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/typing-shortcuts/indent-with-the-tab-key","section":"Typing shortcuts","title":"Indent with the Tab key","tags":["markdown","typing","shortcuts","emoji","autocomplete","tab","indent","outdent","shift+tab","nested list"],"source":"knowledge/ui/09-typing-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 - At the start of a paragraph or list item, `Tab` indents it one step and `Shift+Tab` moves it back out. In a list this nests the item under the one above it.
 - With several paragraphs selected, `Tab` and `Shift+Tab` indent or outdent all of them.
@@ -1502,7 +1502,7 @@ Because `Tab` is used for indenting, it does not move the keyboard focus out of 
 
 ## Keyboard shortcuts › Keyboard shortcuts for formatting and editing
 
-<!-- chunk {"id":"ui/keyboard-shortcuts/keyboard-shortcuts-for-formatting-and-editing","section":"Keyboard shortcuts","title":"Keyboard shortcuts for formatting and editing","tags":["keyboard","shortcuts","hotkeys","keys","shortcut list","ctrl","cmd"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/keyboard-shortcuts/keyboard-shortcuts-for-formatting-and-editing","section":"Keyboard shortcuts","title":"Keyboard shortcuts for formatting and editing","tags":["keyboard","shortcuts","hotkeys","keys","shortcut list","ctrl","cmd"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 Press these while the cursor is in the note. On macOS, ⌘ is the Command key, Opt is the Option key and ⌃ is the Control key.
 
@@ -1546,7 +1546,7 @@ With text selected, `Ctrl+K` (`⌘+K`) makes a link and opens the link box; with
 
 ## Keyboard shortcuts › Find text in a note with the keyboard
 
-<!-- chunk {"id":"ui/keyboard-shortcuts/find-text-in-a-note-with-the-keyboard","section":"Keyboard shortcuts","title":"Find text in a note with the keyboard","tags":["keyboard","shortcuts","hotkeys","keys","find","search","ctrl+f","f3","find next"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/keyboard-shortcuts/find-text-in-a-note-with-the-keyboard","section":"Keyboard shortcuts","title":"Find text in a note with the keyboard","tags":["keyboard","shortcuts","hotkeys","keys","find","search","ctrl+f","f3","find next"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 - `Ctrl+F` (`⌘+F` on macOS) opens the **Find in note** bar at the top of the note, or moves back into it when it is already open. Text you have selected (one line, up to 120 characters) is filled in as the search.
 - Type in the bar: every match is highlighted and a counter such as **2/7** shows which match you are on. The search starts from the cursor position.
@@ -1559,7 +1559,7 @@ The **Find in note** button in the footer's **View options** menu (three vertica
 
 ## Keyboard shortcuts › Switch to full view with F5
 
-<!-- chunk {"id":"ui/keyboard-shortcuts/switch-to-full-view-with-f5","section":"Keyboard shortcuts","title":"Switch to full view with F5","tags":["keyboard","shortcuts","hotkeys","keys","full view","f5","distraction free","hide toolbar"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/keyboard-shortcuts/switch-to-full-view-with-f5","section":"Keyboard shortcuts","title":"Switch to full view with F5","tags":["keyboard","shortcuts","hotkeys","keys","full view","f5","distraction free","hide toolbar"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 Press `F5` to switch full view on or off. Full view hides the toolbar and the footer so the note uses the whole editor area:
 
@@ -1572,7 +1572,7 @@ The **Toggle full view (F5)** button in the footer's **View options** menu (thre
 
 ## Keyboard shortcuts › Zoom the note with Ctrl and the mouse wheel, or a pinch
 
-<!-- chunk {"id":"ui/keyboard-shortcuts/zoom-the-note-with-ctrl-and-the-mouse-wheel-or-a-pinch","section":"Keyboard shortcuts","title":"Zoom the note with Ctrl and the mouse wheel, or a pinch","tags":["keyboard","shortcuts","hotkeys","keys","zoom","ctrl+scroll","pinch","magnify","zoom in","zoom out"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/keyboard-shortcuts/zoom-the-note-with-ctrl-and-the-mouse-wheel-or-a-pinch","section":"Keyboard shortcuts","title":"Zoom the note with Ctrl and the mouse wheel, or a pinch","tags":["keyboard","shortcuts","hotkeys","keys","zoom","ctrl+scroll","pinch","magnify","zoom in","zoom out"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 - **Mouse** — hold `Ctrl` and turn the wheel over the note: forward zooms in, backward zooms out, 3% per step. Use `Ctrl` on macOS too; `⌘` with the wheel does not zoom the note.
 - **Trackpad or touch screen** — pinch with two fingers to zoom in or out.
@@ -1585,7 +1585,7 @@ While the Excalidraw drawing editor is open, or the pointer is over a drawing, `
 
 ## Keyboard shortcuts › Keys in the slash, emoji and mention menus
 
-<!-- chunk {"id":"ui/keyboard-shortcuts/keys-in-the-slash-emoji-and-mention-menus","section":"Keyboard shortcuts","title":"Keys in the slash, emoji and mention menus","tags":["keyboard","shortcuts","hotkeys","keys","typeahead","slash menu keys","emoji keys","mention keys","autocomplete menu"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/keyboard-shortcuts/keys-in-the-slash-emoji-and-mention-menus","section":"Keyboard shortcuts","title":"Keys in the slash, emoji and mention menus","tags":["keyboard","shortcuts","hotkeys","keys","typeahead","slash menu keys","emoji keys","mention keys","autocomplete menu"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 Several menus open at the cursor as you type a trigger character:
 
@@ -1603,7 +1603,7 @@ In all of them:
 
 ## Keyboard shortcuts › Keys in toolbar menus and dialogs
 
-<!-- chunk {"id":"ui/keyboard-shortcuts/keys-in-toolbar-menus-and-dialogs","section":"Keyboard shortcuts","title":"Keys in toolbar menus and dialogs","tags":["keyboard","shortcuts","hotkeys","keys","dropdown keys","dialog keys","escape"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/keyboard-shortcuts/keys-in-toolbar-menus-and-dialogs","section":"Keyboard shortcuts","title":"Keys in toolbar menus and dialogs","tags":["keyboard","shortcuts","hotkeys","keys","dropdown keys","dialog keys","escape"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 - **Toolbar menus** (block type, font, **⋯**, **Insert**, alignment) — once a menu is open, `↓` and `↑` move between its items and `Enter` chooses one. `Escape` or `Tab` closes the menu and puts the focus back on its button.
 - **Dialogs** such as **Insert Table** or **Insert Media** — `Escape` or the close button in the corner closes the dialog without inserting anything.
@@ -1613,7 +1613,7 @@ In all of them:
 
 ## Keyboard shortcuts › Page Up and Page Down with a paper page size
 
-<!-- chunk {"id":"ui/keyboard-shortcuts/page-up-and-page-down-with-a-paper-page-size","section":"Keyboard shortcuts","title":"Page Up and Page Down with a paper page size","tags":["keyboard","shortcuts","hotkeys","keys","page down","page up","paper","page size","a4","letter"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/keyboard-shortcuts/page-up-and-page-down-with-a-paper-page-size","section":"Keyboard shortcuts","title":"Page Up and Page Down with a paper page size","tags":["keyboard","shortcuts","hotkeys","keys","page down","page up","paper","page size","a4","letter"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 When the note uses a paper page size — chosen with the **Page size** menu in the footer, for example **A4** or **Letter** rather than **Web view** — `Page Down` and `Page Up` scroll the note exactly one page down or up, so the top of a page lines up with the top of the view.
 
@@ -1621,7 +1621,7 @@ This only happens while the cursor is in the note and no other key (such as `Shi
 
 ## Keyboard shortcuts › Shortcut keys for the app's own footer buttons
 
-<!-- chunk {"id":"ui/keyboard-shortcuts/shortcut-keys-for-the-apps-own-footer-buttons","section":"Keyboard shortcuts","title":"Shortcut keys for the app's own footer buttons","tags":["keyboard","shortcuts","hotkeys","keys","footer buttons","custom shortcuts","host app"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/keyboard-shortcuts/shortcut-keys-for-the-apps-own-footer-buttons","section":"Keyboard shortcuts","title":"Shortcut keys for the app's own footer buttons","tags":["keyboard","shortcuts","hotkeys","keys","footer buttons","custom shortcuts","host app"],"source":"knowledge/ui/10-keyboard-shortcuts.md","package":"bible-note@0.6.2"} -->
 
 The app that hosts the editor can add its own buttons to the editor's footer and give each one a shortcut key, such as `Ctrl+Shift+K`. The shortcut is shown in brackets in the button's tooltip, and pressing it works like clicking the button, from anywhere on the page.
 
@@ -1629,7 +1629,7 @@ Which buttons and shortcuts there are depends on the app; they are not part of t
 
 ## Find, zoom and view › Search the note with the find bar
 
-<!-- chunk {"id":"ui/find-zoom-and-view/search-the-note-with-the-find-bar","section":"Find, zoom and view","title":"Search the note with the find bar","tags":["find","search","zoom","view","page size","full screen"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/find-zoom-and-view/search-the-note-with-the-find-bar","section":"Find, zoom and view","title":"Search the note with the find bar","tags":["find","search","zoom","view","page size","full screen","scroll to top","table of contents","headings"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.2"} -->
 
 ### Open the find bar
 
@@ -1663,7 +1663,7 @@ The find bar searches the note's own text, including headings, lists and tables.
 
 ## Find, zoom and view › Zoom the note in and out
 
-<!-- chunk {"id":"ui/find-zoom-and-view/zoom-the-note-in-and-out","section":"Find, zoom and view","title":"Zoom the note in and out","tags":["find","search","zoom","view","page size","full screen"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/find-zoom-and-view/zoom-the-note-in-and-out","section":"Find, zoom and view","title":"Zoom the note in and out","tags":["find","search","zoom","view","page size","full screen","scroll to top","table of contents","headings"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.2"} -->
 
 Zoom makes the writing area bigger or smaller. The toolbar and footer stay the same size. The zoom controls sit at the left end of the footer bar:
 
@@ -1688,7 +1688,7 @@ The editor remembers the zoom level the next time it opens.
 
 ## Find, zoom and view › Use the View options menu
 
-<!-- chunk {"id":"ui/find-zoom-and-view/use-the-view-options-menu","section":"Find, zoom and view","title":"Use the View options menu","tags":["find","search","zoom","view","page size","full screen"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/find-zoom-and-view/use-the-view-options-menu","section":"Find, zoom and view","title":"Use the View options menu","tags":["find","search","zoom","view","page size","full screen","scroll to top","table of contents","headings"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.2"} -->
 
 **View options** is the ⋮ button just to the right of the zoom percentage in the footer bar. It stays faint until you point at the footer. Pointing at it, or reaching it with the `Tab` key, opens a small row of buttons:
 
@@ -1702,7 +1702,7 @@ The editor remembers the zoom level the next time it opens.
 
 ## Find, zoom and view › Preview the note on a paper page size
 
-<!-- chunk {"id":"ui/find-zoom-and-view/preview-the-note-on-a-paper-page-size","section":"Find, zoom and view","title":"Preview the note on a paper page size","tags":["find","search","zoom","view","page size","full screen"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/find-zoom-and-view/preview-the-note-on-a-paper-page-size","section":"Find, zoom and view","title":"Preview the note on a paper page size","tags":["find","search","zoom","view","page size","full screen","scroll to top","table of contents","headings"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.2"} -->
 
 The **Page size** list in the footer bar (next to a page icon) changes how the note is laid out on screen. It starts on **Web view**, where the text fills the width of the editor.
 
@@ -1727,7 +1727,7 @@ With a paper size chosen, **View options** (⋮) also offers **Fit page width** 
 
 ## Find, zoom and view › Jump between pages with Page Up and Page Down
 
-<!-- chunk {"id":"ui/find-zoom-and-view/jump-between-pages-with-page-up-and-page-down","section":"Find, zoom and view","title":"Jump between pages with Page Up and Page Down","tags":["find","search","zoom","view","page size","full screen"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/find-zoom-and-view/jump-between-pages-with-page-up-and-page-down","section":"Find, zoom and view","title":"Jump between pages with Page Up and Page Down","tags":["find","search","zoom","view","page size","full screen","scroll to top","table of contents","headings"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.2"} -->
 
 When a paper page size such as A4 or Letter is chosen in the footer's **Page size** list, the note is shown as pages. With the text cursor in the note:
 
@@ -1736,9 +1736,57 @@ When a paper page size such as A4 or Letter is chosen in the footer's **Page siz
 
 The jumps line up with the page lines at any zoom level. They do not work while `Shift`, `Ctrl`, `Alt` or `⌘` is held down. In **Web view** there are no pages, so `Page Up` and `Page Down` behave normally.
 
+## Find, zoom and view › Jump back to the top of the note
+
+<!-- chunk {"id":"ui/find-zoom-and-view/jump-back-to-the-top-of-the-note","section":"Find, zoom and view","title":"Jump back to the top of the note","tags":["find","search","zoom","view","page size","full screen","scroll to top","table of contents","headings"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.2"} -->
+
+Once you scroll a little way down a long note, a small round **Scroll to top** button with an up arrow (↑) fades in at the bottom-right corner of the writing area, just above the footer bar. Click it to glide back to the beginning of the note.
+
+- The button is see-through frosted glass and sits in the empty margin to the right of the text, so it does not hide what you are reading. It becomes solid while you point at it.
+- It stays hidden while you are already near the top of the note, and fades away again once you get there.
+- Clicking it only moves the view. Your text cursor and any selected text stay where they were, so you can keep typing at the same place.
+- It works in **Web view**, on paper page sizes such as A4, and in full view.
+- It is never printed or included in a Word download.
+
+## Find, zoom and view › Jump to a heading with the Table of contents button
+
+<!-- chunk {"id":"ui/find-zoom-and-view/jump-to-a-heading-with-the-table-of-contents-button","section":"Find, zoom and view","title":"Jump to a heading with the Table of contents button","tags":["find","search","zoom","view","page size","full screen","scroll to top","table of contents","headings","outline","navigation","jump"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.2"} -->
+
+The **Table of contents** button lists every heading in the note and takes you straight to the one you pick. It is the first button at the left end of the toolbar, before **Undo**, and shows lines of different lengths, like an outline.
+
+### Turn the Table of contents button on
+
+The button only appears while the **Table Of Contents** switch is on. In apps that have the settings panel, click the round gear button near the bottom-left corner and turn on **Table Of Contents**; turn it off to hide the button again. Some apps turn it on for you.
+
+### Read the list of headings
+
+Click **Table of contents** to open a frosted-glass list just below the button.
+
+- Headings are listed in the order they appear in the note, including headings inside layout columns, tables and collapsible sections.
+- Smaller headings are indented under larger ones, for example a Heading 3 under a Heading 2. The top level is in bold.
+- The heading of the part of the note you are reading is shown in blue, with a blue bar on its left.
+- Each heading is shown as you typed it, even if the note displays it in capital letters. Long headings end in "…"; point at one to see all of it.
+- A heading with no text yet is listed as _Empty heading_.
+- If the note has no headings, the list says **No headings in this note yet**. Choose **Heading 1**, **Heading 2** or **Heading 3** in the block type menu to make one.
+
+### Go to a heading
+
+Click a heading in the list. The list closes and the note glides until that heading sits at the top of the writing area, just below the find bar if it is open. The text cursor moves to the start of the heading, so you can start typing there.
+
+- Near the end of a note there may not be enough text below a heading to bring it all the way up; the note scrolls as far as it can.
+- In a read-only note the note still scrolls to the heading, but the cursor does not move.
+- A heading inside a closed collapsible section is not opened. The note scrolls to the collapsible section instead and the cursor stays where it was.
+- It works in **Web view**, on paper page sizes such as A4, at any zoom level and in full view.
+
+### Use the keyboard
+
+With the **Table of contents** button focused, press `Enter` to open the list. The highlight starts on the heading of the part you are reading. Press `↑` or `↓` to move through the headings, `Enter` to go to the highlighted one, or `Esc` to close the list without moving.
+
+The button and its list are never printed.
+
 ## Find, zoom and view › Use full view and full screen
 
-<!-- chunk {"id":"ui/find-zoom-and-view/use-full-view-and-full-screen","section":"Find, zoom and view","title":"Use full view and full screen","tags":["find","search","zoom","view","page size","full screen"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/find-zoom-and-view/use-full-view-and-full-screen","section":"Find, zoom and view","title":"Use full view and full screen","tags":["find","search","zoom","view","page size","full screen","scroll to top","table of contents","headings"],"source":"knowledge/ui/11-find-zoom-and-view.md","package":"bible-note@0.6.2"} -->
 
 ### Full view
 
@@ -1757,7 +1805,7 @@ To leave full screen, press `Esc`. Full view ends at the same time.
 
 ## Import, export and print › Find the import, export and print buttons
 
-<!-- chunk {"id":"ui/import-export-and-print/find-the-import-export-and-print-buttons","section":"Import, export and print","title":"Find the import, export and print buttons","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/import-export-and-print/find-the-import-export-and-print-buttons","section":"Import, export and print","title":"Find the import, export and print buttons","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.2"} -->
 
 The file buttons are in the footer bar at the bottom of the editor, as icons. Point at one to see its name:
 
@@ -1782,7 +1830,7 @@ How files are opened and saved depends on the app. In a web browser you pick fil
 
 ## Import, export and print › Save the note as a Word document
 
-<!-- chunk {"id":"ui/import-export-and-print/save-the-note-as-a-word-document","section":"Import, export and print","title":"Save the note as a Word document","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/import-export-and-print/save-the-note-as-a-word-document","section":"Import, export and print","title":"Save the note as a Word document","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.2"} -->
 
 Click **Download Word Document** in the footer bar. The editor creates a Microsoft Word file named like "BibleNote 2026-05-09T09-30-00-000Z.docx". In a web browser it is downloaded; in a desktop app a Save dialog lets you choose where it goes.
 
@@ -1802,7 +1850,7 @@ If something goes wrong, a "Word export failed" message explains why.
 
 ## Import, export and print › Open a Word document in the editor
 
-<!-- chunk {"id":"ui/import-export-and-print/open-a-word-document-in-the-editor","section":"Import, export and print","title":"Open a Word document in the editor","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/import-export-and-print/open-a-word-document-in-the-editor","section":"Import, export and print","title":"Open a Word document in the editor","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.2"} -->
 
 Click **Import Word Document** in the footer bar and choose a `.docx` file. Older `.doc` files are not supported.
 
@@ -1819,7 +1867,7 @@ If the file cannot be read, a "Word import failed" message explains why. For exa
 
 ## Import, export and print › Back up or restore a note with Export and Import
 
-<!-- chunk {"id":"ui/import-export-and-print/back-up-or-restore-a-note-with-export-and-import","section":"Import, export and print","title":"Back up or restore a note with Export and Import","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/import-export-and-print/back-up-or-restore-a-note-with-export-and-import","section":"Import, export and print","title":"Back up or restore a note with Export and Import","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.2"} -->
 
 **Export** and **Import** are the lossless way to save and reload a note. The backup file keeps everything in the note exactly, including mentions, sticky notes, drawings, tables and formatting.
 
@@ -1837,7 +1885,7 @@ In a compact footer, **Import** and **Export** are inside the **More actions** (
 
 ## Import, export and print › Print the note
 
-<!-- chunk {"id":"ui/import-export-and-print/print-the-note","section":"Import, export and print","title":"Print the note","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/import-export-and-print/print-the-note","section":"Import, export and print","title":"Print the note","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.2"} -->
 
 Click **Print** (printer icon) in the footer bar. Your system's print dialog opens with the note laid out for printing:
 
@@ -1850,7 +1898,7 @@ Some apps handle printing themselves. In that case **Print** may open the app's 
 
 ## Import, export and print › Clear the whole note
 
-<!-- chunk {"id":"ui/import-export-and-print/clear-the-whole-note","section":"Import, export and print","title":"Clear the whole note","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/import-export-and-print/clear-the-whole-note","section":"Import, export and print","title":"Clear the whole note","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.2"} -->
 
 Click **Clear** (eraser icon) in the footer bar. A "Clear editor" dialog asks "Are you sure you want to clear the editor?".
 
@@ -1863,7 +1911,7 @@ If you clear by mistake, use **Undo** straight away (`Ctrl+Z`, or `⌘+Z` on mac
 
 ## Import, export and print › Share a note as a link
 
-<!-- chunk {"id":"ui/import-export-and-print/share-a-note-as-a-link","section":"Import, export and print","title":"Share a note as a link","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/import-export-and-print/share-a-note-as-a-link","section":"Import, export and print","title":"Share a note as a link","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.2"} -->
 
 **Share as Link** appears in the footer only when the editor runs in a web browser. Desktop apps hide it.
 
@@ -1877,7 +1925,7 @@ Whoever opens the link sees the shared note in the editor. A password-protected 
 
 ## Import, export and print › Convert a note from or to Markdown
 
-<!-- chunk {"id":"ui/import-export-and-print/convert-a-note-from-or-to-markdown","section":"Import, export and print","title":"Convert a note from or to Markdown","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/import-export-and-print/convert-a-note-from-or-to-markdown","section":"Import, export and print","title":"Convert a note from or to Markdown","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.2"} -->
 
 **Convert From Markdown** appears in the footer only when the editor runs in a web browser. Desktop apps hide it. It works in both directions.
 
@@ -1890,7 +1938,7 @@ The **Preserve newlines in Markdown** setting, in the settings panel where the a
 
 ## Import, export and print › Use the More actions menu and Editor Information
 
-<!-- chunk {"id":"ui/import-export-and-print/use-the-more-actions-menu-and-editor-information","section":"Import, export and print","title":"Use the More actions menu and Editor Information","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/import-export-and-print/use-the-more-actions-menu-and-editor-information","section":"Import, export and print","title":"Use the More actions menu and Editor Information","tags":["import","export","word","docx","print","backup","share"],"source":"knowledge/ui/12-import-export-and-print.md","package":"bible-note@0.6.2"} -->
 
 ### More actions
 
@@ -1904,7 +1952,7 @@ Click **Editor Information** (the ⓘ button, or the menu item in a compact foot
 
 ## Comments › Open and close the comments panel
 
-<!-- chunk {"id":"ui/comments/open-and-close-the-comments-panel","section":"Comments","title":"Open and close the comments panel","tags":["comments","review","annotations"],"source":"knowledge/ui/13-comments.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/comments/open-and-close-the-comments-panel","section":"Comments","title":"Open and close the comments panel","tags":["comments","review","annotations"],"source":"knowledge/ui/13-comments.md","package":"bible-note@0.6.2"} -->
 
 Click the speech-bubble button in the footer bar. Its tooltip reads **Show Comments** while the panel is closed and **Hide Comments** while it is open. The **Comments** panel opens at the right-hand side of the editor. It lists every comment thread in the note, or says **No Comments** when there are none.
 
@@ -1918,7 +1966,7 @@ The editor remembers whether the comments panel was open and opens it the same w
 
 ## Comments › Add a comment to selected text
 
-<!-- chunk {"id":"ui/comments/add-a-comment-to-selected-text","section":"Comments","title":"Add a comment to selected text","tags":["comments","review","annotations"],"source":"knowledge/ui/13-comments.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/comments/add-a-comment-to-selected-text","section":"Comments","title":"Add a comment to selected text","tags":["comments","review","annotations"],"source":"knowledge/ui/13-comments.md","package":"bible-note@0.6.2"} -->
 
 1. Select the words you want to comment on.
 2. Click **Insert comment** (speech-bubble icon) in the small formatting toolbar that appears above the selection. You can also press `Ctrl+Alt+M` on Windows and Linux, or `⌘+Opt+M` on macOS.
@@ -1935,7 +1983,7 @@ Commenting needs the toolbar, so it is not available while the **Rich Text** set
 
 ## Comments › See which text a comment belongs to
 
-<!-- chunk {"id":"ui/comments/see-which-text-a-comment-belongs-to","section":"Comments","title":"See which text a comment belongs to","tags":["comments","review","annotations"],"source":"knowledge/ui/13-comments.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/comments/see-which-text-a-comment-belongs-to","section":"Comments","title":"See which text a comment belongs to","tags":["comments","review","annotations"],"source":"knowledge/ui/13-comments.md","package":"bible-note@0.6.2"} -->
 
 Commented text is shown with a pale yellow background and a yellow line underneath. Where two comments cover the same words, the yellow is stronger.
 
@@ -1946,7 +1994,7 @@ If you delete all of the commented text from the note, the thread stays in the *
 
 ## Comments › Reply to a comment
 
-<!-- chunk {"id":"ui/comments/reply-to-a-comment","section":"Comments","title":"Reply to a comment","tags":["comments","review","annotations"],"source":"knowledge/ui/13-comments.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/comments/reply-to-a-comment","section":"Comments","title":"Reply to a comment","tags":["comments","review","annotations"],"source":"knowledge/ui/13-comments.md","package":"bible-note@0.6.2"} -->
 
 Each thread in the **Comments** panel ends with a "Reply to comment..." box.
 
@@ -1959,7 +2007,7 @@ The reply is added to the end of the thread with the label **Commented** and its
 
 ## Comments › Delete a comment or a whole thread
 
-<!-- chunk {"id":"ui/comments/delete-a-comment-or-a-whole-thread","section":"Comments","title":"Delete a comment or a whole thread","tags":["comments","review","annotations"],"source":"knowledge/ui/13-comments.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/comments/delete-a-comment-or-a-whole-thread","section":"Comments","title":"Delete a comment or a whole thread","tags":["comments","review","annotations"],"source":"knowledge/ui/13-comments.md","package":"bible-note@0.6.2"} -->
 
 Delete buttons (trash-can icons) appear in the **Comments** panel when you point at a thread or a comment.
 
@@ -1977,7 +2025,7 @@ The thread and all its replies leave the panel, and the yellow highlight is remo
 
 ## Comments › Are comments saved?
 
-<!-- chunk {"id":"ui/comments/are-comments-saved","section":"Comments","title":"Are comments saved?","tags":["comments","review","annotations"],"source":"knowledge/ui/13-comments.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/comments/are-comments-saved","section":"Comments","title":"Are comments saved?","tags":["comments","review","annotations"],"source":"knowledge/ui/13-comments.md","package":"bible-note@0.6.2"} -->
 
 Yes. The BibleNote editor saves comments automatically, together with its other data: the thread list, every reply, and whether the **Comments** panel is open. They are still there when you close and reopen the editor. Where they are stored depends on the app; in a web browser they are kept in that browser on this device.
 
@@ -1988,7 +2036,7 @@ Keep these points in mind:
 
 ## Settings › Open the settings panel
 
-<!-- chunk {"id":"ui/settings/open-the-settings-panel","section":"Settings","title":"Open the settings panel","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/settings/open-the-settings-panel","section":"Settings","title":"Open the settings panel","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.2"} -->
 
 The settings panel is opened with a round gear button, usually near the bottom-left corner of the window, just above the footer bar. Click the gear to open the panel; it turns red while the panel is open. Click it again to close the panel.
 
@@ -2000,7 +2048,7 @@ The editor remembers your settings and uses them the next time it opens. Where t
 
 ## Settings › See every settings switch and its default
 
-<!-- chunk {"id":"ui/settings/see-every-settings-switch-and-its-default","section":"Settings","title":"See every settings switch and its default","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/settings/see-every-settings-switch-and-its-default","section":"Settings","title":"See every settings switch and its default","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.2"} -->
 
 These are the switches in the settings panel and how each one starts out:
 
@@ -2035,7 +2083,7 @@ These are the switches in the settings panel and how each one starts out:
 
 ## Settings › Display switches: Dark Mode, invisible characters and Table Of Contents
 
-<!-- chunk {"id":"ui/settings/display-switches-dark-mode-invisible-characters-and-table-of-contents","section":"Settings","title":"Display switches: Dark Mode, invisible characters and Table Of Contents","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/settings/display-switches-dark-mode-invisible-characters-and-table-of-contents","section":"Settings","title":"Display switches: Dark Mode, invisible characters and Table Of Contents","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.2"} -->
 
 ### Dark Mode
 
@@ -2047,11 +2095,11 @@ Shows marks for characters you normally cannot see: · for a space, → for a ta
 
 ### Table Of Contents
 
-Shows a list of the note's headings beside the note. Click a heading in the list to scroll the note smoothly to it. The list updates as you add, change or remove headings.
+Off by default. Turning it on adds a **Table of contents** button at the left end of the toolbar, before **Undo**. Click the button to open a frosted-glass list of the note's headings, indented by level, with the heading of the part you are reading shown in blue. Click a heading in the list and the note scrolls until that heading is at the top of the writing area, with the text cursor at its start (in a read-only note it only scrolls). Turn the switch off to remove the button.
 
 ## Settings › Writing switches: Autocomplete, brackets and Retain selection
 
-<!-- chunk {"id":"ui/settings/writing-switches-autocomplete-brackets-and-retain-selection","section":"Settings","title":"Writing switches: Autocomplete, brackets and Retain selection","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/settings/writing-switches-autocomplete-brackets-and-retain-selection","section":"Settings","title":"Writing switches: Autocomplete, brackets and Retain selection","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.2"} -->
 
 ### Autocomplete
 
@@ -2073,7 +2121,7 @@ Normally the selected text stops looking selected when you click somewhere else,
 
 ## Settings › Use the editor's own right-click menu
 
-<!-- chunk {"id":"ui/settings/use-the-editors-own-right-click-menu","section":"Settings","title":"Use the editor's own right-click menu","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/settings/use-the-editors-own-right-click-menu","section":"Settings","title":"Use the editor's own right-click menu","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.2"} -->
 
 The **Use Lexical Context Menu** switch is off by default. Right-clicking in the note then shows the usual menu of the browser or app.
 
@@ -2088,7 +2136,7 @@ Turn it on and right-clicking in the note shows the editor's own menu instead:
 
 ## Settings › Code and formatting switches
 
-<!-- chunk {"id":"ui/settings/code-and-formatting-switches","section":"Settings","title":"Code and formatting switches","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/settings/code-and-formatting-switches","section":"Settings","title":"Code and formatting switches","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.2"} -->
 
 ### Enable Code Highlighting
 
@@ -2116,7 +2164,7 @@ Off by default. When on, **Convert From Markdown** keeps blank lines and line br
 
 ## Settings › Reset to Defaults
 
-<!-- chunk {"id":"ui/settings/reset-to-defaults","section":"Settings","title":"Reset to Defaults","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.0"} -->
+<!-- chunk {"id":"ui/settings/reset-to-defaults","section":"Settings","title":"Reset to Defaults","tags":["settings","preferences","options"],"source":"knowledge/ui/14-settings.md","package":"bible-note@0.6.2"} -->
 
 **Reset to Defaults** is the button at the bottom of the settings panel. It is greyed out while every setting, including the page size, is at its default.
 
